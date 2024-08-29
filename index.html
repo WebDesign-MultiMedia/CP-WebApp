@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <title>Document</title>
+</head>
+<body>
+ 
+    <!-- <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>  -->
+   
+    
+      <!-- Log Section -->  
+  
+      <form class="row g-3 needs-validation" novalidate>
+        <h2>Vehcile Maintence Log</h2>
+        <div class="inputOne col-md-4 ">
+            <label for="validationCustomUsername" class="form-label">Date</label>
+            <div class="input-group has-validation inOne">
+              <input type="date" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                Please add a <b>Date.</b>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="inputTwo col-md-4">
+            <label for="validationCustomUsername" class="form-label">Mileage</label>
+            <div class="input-group has-validation">
+              <input type="number" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                Please add your <b>Mileage.</b>
+              </div>
+            </div>
+          </div>
+
+
+        <div class="inputThree col-md-4">
+          <label for="validationCustomUsername" class="form-label">Description</label>
+          <div class="input-group has-validation">
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              What parts did you <b>Change</b>.
+            </div>  
+          </div> 
+        </div>
+
+        <div class="inputFour col-md-4">
+            <label for="validationCustomUsername" class="form-label">Brand Name</label>
+            <div class="input-group has-validation">
+              <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                What brand do you <b>add.</b>
+              </div>
+            </div>
+          </div>
+        <div class="col-12"> 
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </form>
+ 
+      <!-- Veh History Log Section -->
+      <!-- <div class="card" style="width: 18rem;height: 30rem;border: 5px solid black;"> 
+        <div class="card-body">
+          <h5 class="card-title">History Logs</h5>
+          <div class="log-container">
+            <ul class="list-log">
+                <li>Date:</li>
+                <li>Mileage:</li>
+                <li>Deacription:</li>
+                <li>Brand Name:</li>
+            </ul>
+            <div class="log-root"></div>
+          </div>
+        </div>
+      </div> -->
+  
+  
+  
+      <form class="row historyViewLog">
+        <br>
+        <h2>History Log</h2>
+        <div class="box-history-log">
+          <div class="detail-log">
+            
+          </div>
+        </div>
+        <!-- <div class="inputOne col-md-4 ">
+            <label for="validationCustomUsername" class="form-label">Date</label>
+            <div class="input-group has-validation inOne">
+              <input type="date" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                Please add a <b>Date.</b>
+              </div>
+            </div>
+          </div> -->
+<!--  
+          <div class="inputTwo col-md-4">
+            <label for="validationCustomUsername" class="form-label">Mileage</label>
+            <div class="input-group has-validation">
+              <input type="number" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                Please add your <b>Mileage.</b>
+              </div>
+            </div>
+          </div>
+
+
+        <div class="inputThree col-md-4">
+          <label for="validationCustomUsername" class="form-label">Description</label>
+          <div class="input-group has-validation">
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              What parts did you <b>Change</b>.
+            </div>  
+          </div> 
+        </div>
+
+        <div class="inputFour col-md-4">
+            <label for="validationCustomUsername" class="form-label">Brand Name</label>
+            <div class="input-group has-validation">
+              <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                What brand do you <b>add.</b>
+              </div>
+            </div>
+          </div>
+        <div class="col-12"> 
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div> -->
+      </form>
+     
+      <!-- Auto Parts Section -->
+      <form class="row autoPArts">
+        <br>
+        <h2>Auto Parts</h2>
+        <div class="OEM">
+          <h3>OEM</h3>
+
+          <details class="OEM-aboutInfo">
+            <summary>Info</summary>
+            <div style="position: relative;top: 0.5em;left: -0.4em;height:420px;width:320px;background-color: black;border:1.5px solid #FFCC00;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+              <h8>Definition</h8>
+              <p>These are parts made by the vehicle’s original manufacturer or an approved supplier.
+                They are identical to the parts that originally came with your vehicle.</p>
+            
+               <h8>Quality and Fit</h8>
+              <p>High quality, guaranteed fit, and reliability as they meet the exact specifications set by the carmaker.</p>
+   
+              <h8>Warranty</h8>
+              <p>Often come with a warranty backed by the vehicle manufacturer.</p>
+  
+              <h8>Cost</h8>
+              <p>Usually more expensive than aftermarket parts due to the branding and assurance of quality.</p>
+           
+              <h8>Availabilty</h8>
+              <p> Primarily available at dealerships and authorized parts retailers.</p>
+           
+              <h8>Best for</h8>
+              <p> Those who prefer reliability, want to maintain their vehicle’s factory condition, or are concerned about warranty coverage.</p>
+         
+            
+            </div>
+          </details>
+
+          <div class="OEM-parts">
+            <i class="fa-solid fa-circle-left"></i>
+
+            <i class="fa-solid fa-circle-right"></i>
+          </div>
+          
+        </div>
+        <div class="AfterMarket">
+          <h3>AfterMarket</h3>
+          <details class="afterMarket-aboutInfo">
+            <summary>Info</summary>
+            <div style="position: relative;top: 0.5em;left: -0.4em;height:420px;width:320px;background-color: black;border:1.5px solid #FFCC00;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+              <h8>Definition</h8>
+              <p> 
+                Parts made by third-party companies not associated with the vehicle’s original manufacturer. 
+They serve as alternatives to OEM parts and are often designed to fit multiple models.
+                </p>
+
+              <h8>Quality and Fit</h8>
+              <p>
+                Quality can vary widely, from budget options to high-quality alternatives. Fit and finish may not always be as precise as OEM.
+              </p>
+
+              <h8>Warranty</h8>
+              <p>
+                Some come with warranties, but they vary by brand and part.
+              </p>
+
+              <h8>Cost</h8>
+              <p>
+                Typically less expensive than OEM parts, with a range of pricing depending on the brand and quality.
+              </p>
+
+              <h8>Availabilty</h8>
+              <p> 
+                Widely available from auto parts stores, online retailers, and repair shops.
+              </p>
+
+              <h8>Best for</h8>
+              <p> 
+                Budget-conscious buyers, those looking for more options, or those who don’t need the exact OEM specifications.
+              </p>
+            </div>
+          </details>
+          <div class="aftermarket-parts">
+            <i class="fa-solid fa-circle-left"></i>
+            
+            <i class="fa-solid fa-circle-right"></i>
+          </div>
+        </div>
+        <div class="Performance">
+          <h3>Performance</h3>
+          <div class="performance-parts">
+            <i class="fa-solid fa-circle-left"></i>
+            
+            <i class="fa-solid fa-circle-right"></i>
+          </div>
+        </div>
+
+      </form>
+      <!-- <div class="AutoParts" style="width: 18rem;height: 50rem;border: 5px solid black;"> 
+        <div class="card-body">
+          <h5 class="card-title-auto">Auto Parts</h5>
+
+          <div class="log-container-auto-OEM">
+            <h2>OEM</h2>
+
+            <ul class="list-log-auto">
+              
+                <i class="fa-solid fa-circle-chevron-left"></i> -->
+
+                  <!-- DropDown -->
+                <!-- <div class="dropdown ">
+                  <button class="btn bg-warning dropdown-toggle mx-auto p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Info
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark ps-5" >
+
+                    <article>
+                      <h8>Definition</h8>
+                      <p> 
+                        These are parts made by the vehicle’s original manufacturer or an approved supplier.
+                         They are identical to the parts that originally came with your vehicle.
+                        
+                        </p>
+                    </article>
+
+                    <article>
+                      <h8>Quality and Fit</h8>
+                      <p>High quality, guaranteed fit, and reliability as they meet the exact specifications set by the carmaker.
+                      </p>
+                    </article>
+                    <article>
+                      <h8>Warranty</h8>
+                      <p>Often come with a warranty backed by the vehicle manufacturer.
+                      </p>
+
+                      
+                    </article>
+                    <article>
+                      <h8>Cost</h8>
+                      <p>Usually more expensive than aftermarket parts due to the branding and assurance of quality.
+                      </p>
+                    </article>
+                    <article>
+                      <h8>Availabilty</h8>
+                      <p> Primarily available at dealerships and authorized parts retailers.
+                      </p>
+                    </article>
+                    <article>
+                      <h8>Best for</h8>
+                      <p> Those who prefer reliability, want to maintain their vehicle’s factory condition, or are concerned about warranty coverage.</p>
+                    </article>
+                  </ul>
+                </div>
+                <i class="fa-solid fa-circle-chevron-right"></i>
+            </ul>
+            </div> -->
+
+
+            <!-- AfterMarket sec -->
+            <!-- <div class="log-container-auto-AfterMarket">
+                <ul class="list-log-auto">
+                  <i class="fa-solid fa-circle-chevron-left"></i>
+                  <h2>AfterMarket</h2>
+                
+                     DropDown 
+                <div class="dropdown ">
+                  <button class="btn bg-warning dropdown-toggle mx-auto p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Info
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark ps-5" >
+
+                    <article>
+                      <h8>Definition</h8>
+                      <p> 
+                        Parts made by third-party companies not associated with the vehicle’s original manufacturer. 
+They serve as alternatives to OEM parts and are often designed to fit multiple models.
+                        </p>
+                    </article>
+
+                    <article>
+                      <h8>Quality and Fit</h8>
+                      <p>
+                        Quality can vary widely, from budget options to high-quality alternatives. Fit and finish may not always be as precise as OEM.
+                      </p>
+                    </article>
+                    <article>
+                      <h8>Warranty</h8>
+                      <p>
+                        Some come with warranties, but they vary by brand and part.
+                      </p>
+                    </article>
+                    <article>
+                      <h8>Cost</h8>
+                      <p>
+                        Typically less expensive than OEM parts, with a range of pricing depending on the brand and quality.
+                      </p>
+                    </article>
+                    <article>
+                      <h8>Availabilty</h8>
+                      <p> 
+                        Widely available from auto parts stores, online retailers, and repair shops.
+                      </p>
+                    </article>
+                    <article>
+                      <h8>Best for</h8>
+                      <p> 
+                        Budget-conscious buyers, those looking for more options, or those who don’t need the exact OEM specifications.
+                      </p>
+                    </article>
+                  </ul>
+                </div>
+                <i class="fa-solid fa-circle-chevron-right"></i>
+                </ul>
+                </div> -->
+
+                  <!-- Performance -->
+                <!-- <div class="log-container-auto-Performance">
+                    <ul class="list-log-auto">
+                        <i class="fa-solid fa-circle-chevron-left"></i>
+                        <h2>Performance</h2> -->
+                  <!-- DropDown -->
+                  <!-- <div class="dropdown ">
+                    <button class="btn bg-warning dropdown-toggle mx-auto p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Info
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark ps-5" >
+  
+                      <article>
+                        <h8>Definition</h8>
+                        <p> 
+                          These parts are specifically designed to enhance the performance, handling, or aesthetics of a vehicle. 
+                          They can be either OEM or aftermarket but are engineered for improved performance over stock parts.
+                          </p>
+                      </article>
+  
+                      <article>
+                        <h8>Quality and Fit</h8>
+                        <p>
+                          Usually higher-quality materials and engineering focused on performance gains. 
+                          Fit may differ from OEM if designed for performance purposes (e.g., wider tires, lower suspensions).                        </p>
+                      </article>
+                      <article>
+                        <h8>Warranty</h8>
+                        <p>
+                          Performance parts may have limited or no warranty, especially if they 
+                          alter vehicle performance beyond factory specifications.                        </p>
+                      </article>
+                      <article>
+                        <h8>Cost</h8>
+                        <p>
+                          Often more expensive than both OEM and standard 
+                          aftermarket parts due to specialized design and materials.
+                        </p>
+                      </article>
+                      <article>
+                        <h8>Availabilty</h8>
+                        <p> 
+                          Sold by performance-focused retailers and specialty shops.
+                        </p>
+                      </article>
+                      <article>
+                        <h8>Best for</h8>
+                        <p> 
+                          Enthusiasts looking for upgrades in speed, power, handling, braking, or aesthetics, 
+                          or those who want to customize their vehicle for specific needs like racing, off-roading, or towing.                        </p>
+                      </article>
+                    </ul>
+                  </div>
+          
+                        <i class="fa-solid fa-circle-chevron-right"></i>
+                    </ul>
+                 </div>
+        </div>
+      </div> -->
+
+
+      <!-- How-To -->
+      <!-- <div class="How-To" style="width: 18rem;height: 50rem;border: 5px solid black;"> 
+        <div class="card-body">
+          <h5 class="card-title-howTo">How-To</h5>
+
+          <div class="video-box" style="height:320px;width:280px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+            <h4>Video</h4>
+            <ul>  
+              <li>
+                  <a href="https://www.carcarekiosk.com/review/2008_Honda_Pilot_EX-L_3.5L_V6" class="functions text-dark" data-gtm-vis-recent-on-screen30290612_13="161" data-gtm-vis-first-on-screen30290612_13="162" data-gtm-vis-total-visible-time30290612_13="100" data-gtm-vis-has-fired30290612_13="1">Ownership Review</a>
+                  <img src="https://d2n97g4vasjwsk.cloudfront.net/2008 Honda Pilot EX-L 3.5L V6/Vehicle - Review.png" alt="2008 Honda Pilot EX-L 3.5L V6 Review" class="card-img-top">
+                </li>
+                <br>
+                <li>
+                  <ul class="list-group list-group-flush collapse text-left show" id="collapse-oil" aria-labelledby="heading-oil">
+                    <li class="list-group-item">
+                      <p>Engine Oil</p>
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/oil/add_oil" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="22756">Add Oil</a>
+        </li>
+                    <li class="list-group-item">
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/oil/change_oil_and_oil_filter" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="175359">Change Oil and Oil Filter</a>
+        </li>
+                    <li class="list-group-item">
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/oil/check_oil_level" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="175376">Check Oil Level</a>
+        </li>
+                  </ul>                  <img src="https://d2n97g4vasjwsk.cloudfront.net/2008+Honda+Pilot+EX-L+3.5L+V6%2FOil+Fill+Cap+-+Part+1.png" alt="2008 Honda Pilot EX-L 3.5L V6 Oil" class="card-img-top" loading="lazy">
+                </li>
+                  <br>
+                <li>
+                  <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/jack_up_car/use_your_jack_to_raise_your_car" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="144">Use Your Jack to Raise Your Car</a>
+                  <img src="https://d2n97g4vasjwsk.cloudfront.net/2008+Honda+Pilot+EX-L+3.5L+V6%2FTire+Change+-+Part+1.png" alt="2008 Honda Pilot EX-L 3.5L V6 Jack Up Car" class="card-img-top" loading="lazy">
+                </li>
+                <br>
+                <li>
+                  <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/tires_and_wheels/change_a_flat_tire" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="37486">Change a Flat Tire</a>
+                  <img src="https://d2n97g4vasjwsk.cloudfront.net/2008+Honda+Pilot+EX-L+3.5L+V6%2FTire+Change+-+Part+1.png" alt="2008 Honda Pilot EX-L 3.5L V6 Tires &amp; Wheels" class="card-img-top" loading="lazy">
+                </li>
+                  <br>
+                <li>
+                  <ul class="list-group list-group-flush collapse text-left show" id="collapse-transmissionfluid" aria-labelledby="heading-transmissionfluid">
+                    <li class="list-group-item">
+                      <p>Transmission</p>
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/transmission_fluid/add_level" class="functions text-dark" data-gtm-vis-recent-on-screen30290612_13="348106" data-gtm-vis-first-on-screen30290612_13="348106" data-gtm-vis-total-visible-time30290612_13="100" data-gtm-vis-has-fired30290612_13="1">Add Fluid</a>
+        </li>
+                    <li class="list-group-item">
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/transmission_fluid/check_fluid_level" class="functions text-dark" data-gtm-vis-recent-on-screen30290612_13="348139" data-gtm-vis-first-on-screen30290612_13="348139" data-gtm-vis-total-visible-time30290612_13="100" data-gtm-vis-has-fired30290612_13="1">Check Fluid Level</a>
+        </li>
+                    <li class="list-group-item">
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/transmission_fluid/fix_leaks" class="functions text-dark" data-gtm-vis-recent-on-screen30290612_13="348172" data-gtm-vis-first-on-screen30290612_13="348172" data-gtm-vis-total-visible-time30290612_13="100" data-gtm-vis-has-fired30290612_13="1">Fix Leaks</a>
+        </li>
+                  </ul>                  <img src="https://d2n97g4vasjwsk.cloudfront.net/2008+Honda+Pilot+EX-L+3.5L+V6%2FTransmission+Fluid+-+Part+1.png" alt="2008 Honda Pilot EX-L 3.5L V6 Transmission Fluid" class="card-img-top" loading="lazy">
+                </li>
+                <br>
+              <li>
+                <ul class="list-group list-group-flush collapse text-left show" id="collapse-battery" aria-labelledby="heading-battery">
+                  <li class="list-group-item">
+                    <p>Battery</p>
+        <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/battery/jump_start" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="26033" data-gtm-vis-recent-on-screen30290612_13="433642" data-gtm-vis-total-visible-time30290612_13="100" data-gtm-vis-has-fired30290612_13="1">Jumpstart</a>
+      </li>
+                  <li class="list-group-item">
+        <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/battery/replace_battery" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="26035" data-gtm-vis-recent-on-screen30290612_13="432923" data-gtm-vis-total-visible-time30290612_13="100" data-gtm-vis-has-fired30290612_13="1">Replace</a>
+      </li>
+                </ul>
+                <img src="https://d2n97g4vasjwsk.cloudfront.net/2008+Honda+Pilot+EX-L+3.5L+V6%2FBattery+Locate+-+Part+1.png" alt="2008 Honda Pilot EX-L 3.5L V6 Battery" class="card-img-top">
+              </li>
+                <br>
+                <li>
+                  <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/air_filter_cabin/replace" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="166"> Air Filter (Cabin) Replace</a>
+                  <img src="https://d2n97g4vasjwsk.cloudfront.net/2008+Honda+Pilot+EX-L+3.5L+V6%2FAir+Filter+Cabin+-+Part+1.png" alt="2008 Honda Pilot EX-L 3.5L V6 Air Filter (Cabin)" class="card-img-top">
+                </li>
+                <br>
+                <li>
+                  <ul class="list-group list-group-flush collapse text-left show" id="collapse-lights" aria-labelledby="heading-lights">
+                    <li class="list-group-item">
+                      <p>Car Lights</p>
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/lights/brake_light" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="141">Brake Light (replace bulb)</a>
+        </li>
+                    <li class="list-group-item">
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/lights/center_brake_light" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="142">Center Brake Light (replace bulb)</a>
+        </li>
+                    <li class="list-group-item">
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/lights/daylight_running" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="143">Daytime Running Light (replace bulb)</a>
+        </li>
+                    <li class="list-group-item">
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/lights/foglamp" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="144">Fog Light (replace bulb)</a>
+        </li>
+                    <li class="list-group-item">
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/lights/headlight" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="144">Headlight (replace bulb)</a>
+        </li>
+                    <li class="list-group-item">
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/lights/highbeam" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="145">Highbeam (replace bulb)</a>
+        </li>
+                    <li class="list-group-item">
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/lights/parking_light" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="145">Parking Light (replace bulb)</a>
+        </li>
+                    <li class="list-group-item">
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/lights/reverse_light" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="146">Reverse Light (replace bulb)</a>
+        </li>
+                    <li class="list-group-item">
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/lights/tail_light" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="146">Tail Light (replace bulb)</a>
+        </li>
+                    <li class="list-group-item">
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/lights/turn_signal_front" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="147">Turn Signal - Front (replace bulb)</a>
+        </li>
+                    <li class="list-group-item">
+          <a href="https://www.carcarekiosk.com/video/2008_Honda_Pilot_EX-L_3.5L_V6/lights/turn_signal_rear" class="functions text-dark" data-gtm-vis-first-on-screen30290612_13="22623">Turn Signal - Rear (replace bulb)</a>
+        </li>
+                  </ul>
+                  <img src="https://d2n97g4vasjwsk.cloudfront.net/2008+Honda+Pilot+EX-L+3.5L+V6%2FLights+BL+-+Part+1.png" alt="2008 Honda Pilot EX-L 3.5L V6 Lights" class="card-img-top" loading="lazy">
+                </li>
+          
+            </ul>
+
+            
+            </div>
+
+            <br>
+            <div class="Reading" style="height:120px;width:280px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+              <h4>Reading</h4>
+              <ul>
+                  <li>
+                    <h5>Battery</h5>
+                      <a href="../details/131247047-14991.html"><i class="fa-solid fa-circle"> </i> Checking the Battery.</a> <br>
+                      <a href="../details/131247047-227310.html"><i class="fa-solid fa-circle"> </i> Charging the AGM Battery.</a>
+                  </li>
+                  <br> 
+                  <li>
+                    <h5>Checking and Maintining Tires</h5>
+                      <a href="../details/131247047-14555.html"><i class="fa-solid fa-circle"> </i> Checking Tires.</a> <br>
+                      <a href="../details/131247047-14608.html"><i class="fa-solid fa-circle"> </i> Tire and Loading Information Label.</a> <br>
+                      <a href="../details/131247047-14646.html"><i class="fa-solid fa-circle"> </i> Tire Labeling.</a> <br>
+                      <a href="../details/131247047-14750.html"><i class="fa-solid fa-circle"> </i> DOT Tire Quality Grading (U.S. Vehicles).</a> <br>
+                      <a href="../details/131247047-14814.html"><i class="fa-solid fa-circle"> </i> Wear Indicators.</a> <br>
+                      <a href="../details/131247047-14851.html"><i class="fa-solid fa-circle"> </i> Tire Service Life.</a> <br>
+                      <a href="../details/131247047-14857.html"><i class="fa-solid fa-circle"> </i> Tire and Wheel Replacement.</a> <br>
+                      <a href="../details/131247047-14882.html"><i class="fa-solid fa-circle"> </i> Tire Rotation.</a>
+                      <a href="../details/131247047-14921.html"><i class="fa-solid fa-circle"> </i> Winter Tires.</a>
+                  </li>
+                  
+                  
+                  <li></li>
+                  <li></li>
+                  <li></li>
+              </ul> 
+            
+            </div>  -->
+
+  
+
+        </div>
+      </div>
+
+
+
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/075c6894c0.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
