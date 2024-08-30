@@ -4,11 +4,15 @@
     /* Body style
 
     /* Nav Bar */
+    .noMobile{
+        display: none;
+    }
+
     .nav{
         background-color: black;
         border-radius: 100%;
-        width: 10vw;
-        height: 10vw;
+        width: 13vw;
+        height: 12vw;
         position:fixed;
         top: 1em;
         left: 0.5em;
@@ -19,8 +23,15 @@
     .fa-bars{
         color: white;
         position: absolute;
-        left: 3.5vw;
+        left: 4.1vw;
         top: 3vw;
+        font-size: 1.5em;
+    }
+
+    #backg-nav{
+        display: none;
+        position: absolute;
+        z-index: 9;
     }
 
     /* body{background-color: #0301016b; */
@@ -30,7 +41,7 @@
         width: 35vw;
         height: 20em;
         position: absolute;
-        z-index: 9;
+        /* z-index: 9; */
         top: 8.5vw;
         left: -3vw;
         border-radius: 5%;
@@ -137,11 +148,12 @@
 
     .autoParts-box{
         background-color: gray;
-        width: 50px;
+        width: 90vw;
         height: 200px;
         position: relative;
-        top: 10em;
+        top: 83em;
         border-radius: 5%;
+        left: 5vw;
     }
     .autoParts-box h2{
         color: white;
@@ -152,6 +164,7 @@
         top: 1.5em;
         right: -2vw;
         font-size: 40px;
+        
       }
 
       .fa-circle-right{
@@ -190,7 +203,7 @@
         position: absolute;
         top: 10px;
         left: 20px;
-        z-index: 9;
+        z-index: 1;
         border-radius: 3%;
         color: white;
       }
@@ -237,7 +250,7 @@
         position: absolute;
         top: 1em;
         left: 20px;
-        z-index: 9;
+        z-index: 1;
         border-radius: 3%;
         color: white;
      }
@@ -281,7 +294,7 @@
         position: absolute;
         top: -2.5em;
         left: 5%;
-        z-index: 9;
+        z-index: 8;
         border-radius: 3%;
         color: white;
       }
@@ -316,13 +329,16 @@
     .howTo-box{
         background-color: gray;
         position: relative;
-        top: 100em;
+        top: 180em;
         height: 200px;
         border-radius: 5%;
+        width: 90vw;
+        left: 5vw;
     }
 
     .howTo-box h2{
         color: white;
+        text-align: center;
     }
             /* Videos */
     .howTo-video{
@@ -352,7 +368,7 @@
 
     .scroll-box{
         height:250px;
-        width:84vw;
+        width:90vw;
         border:1px solid rgba(255, 0, 0, 0);
         font:16px/26px Georgia, Garamond, Serif;
         overflow:auto;
@@ -373,7 +389,7 @@
 
     .scroll-box2{
         height:240px;
-        width:84vw;
+        width:90vw;
         border:1px solid rgba(255, 0, 0, 0);
         font:16px/26px Georgia, Garamond, Serif;
         overflow:auto;
@@ -386,7 +402,7 @@
         /* Footer */
         .card{
             position: absolute;
-            top: 140em;
+            top: 230em;
             width: 100vw;
             left: -8vw;
 
@@ -428,13 +444,241 @@
 }}
         
       
-
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {...} */
+   
 
 /* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {...} */
+ @media only screen and (min-width: 768px) {
+    
+
+    /* No Moble nad */
+    .nav .fa-bars{
+        display: none;
+    }
+
+    /* Nav Bar */
+
+    .noMobile{
+        height:50px;
+    }
+    #navb{
+        position: fixed;
+        z-index: 9;
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    /* Log box */
+    .logBox{
+        background: #4b98e65c;
+        width: 40vw;
+        height: 35em;
+        position: relative;
+        left: 7.5%;
+        top: 90px;
+        border-radius: 5%;
+        /* border: 2px solid red; */
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logBox h2{
+        color: red;
+        text-align: center;
+    }
+
+    #box{
+        position: relative;
+        left: 5%;
+        top: -30px;
+        width: 35vw;
+        font-size: 20px;
+    }
+
+    .invalid-feedback{
+        position: absolute;
+        z-index: 4;
+        left: 20%;
+        top: 32px;
+    }
+
+    .invalid-feedback p{
+        font-size: 1.2em;
+        position: relative;
+        left: -20%;
+    }
+
+    .btn{
+        position: absolute;
+        top: 40px;
+        left: 35%;
+    }
+
+    .form-label{
+        color: black;
+        position: relative;
+        left: 5%;
+        top: 10px;
+        font-size: 25px;
+    }
+    
+
+        /* History Log */
+        #logHistory{
+            width: 50vw;            
+            left: 48vw;
+            height: 50em;
+            background-color: #4b98e65c;
+            position: absolute;
+            border-radius: 1%;
+            /* border: 1px solid red; */
+            top: 7.5em;
+        }
+
+        #logHistory h2{
+            color: white;
+            text-align: center;
+            position: relative;
+            top: 10px;
+        }
+
+        footer{
+            display: none;
+        }
+
+
+
+        /* Auto Parts */
+        .autoParts-box{
+            position: relative;
+            background-color: yellow;
+            top: 65em;
+            height: 60em;
+        }
+
+        #AutoParts{
+            display: flex;
+            background-color: blue;
+            border-radius: 2%;
+            flex-direction: column;
+            width: 85vw;
+            height: 101em;            
+            left: 8.7vw;
+        }
+        #AutoParts > #flex{
+            background-color: white;
+            margin: 50px;
+            padding: 20px;
+            font-size: 20px;
+            height: 400px;
+
+            position: relative;
+            top: 4em;
+        } 
+
+        .autoParts-box h2{
+            text-align: center;
+            color: white;
+            font-size: 3em;
+            position: relative;
+            top: 0.5em;
+        }
+
+        .autoParts-box h3{
+            text-align: center;
+            letter-spacing: 5px;
+            font-size: 1.5em;
+        }
+
+        .fa-circle-left{
+            font-size: 3.5em;
+        }
+
+        .fa-circle-right{
+            font-size: 3.5em;
+            position: relative;
+            left: 5.7em;
+        }
+
+
+        #AutoParts details{
+            position: relative;
+            left: 0em;
+            font-size: 1.7em;
+            top: -1.9em;
+            width: 50vw;
+        }
+
+        .tab-scroll{
+            position: relative;
+            top: 0.5em;
+            left: -5em;
+            height:420px;
+            width:700px;
+            background-color: black;
+            border:1.5px solid #FFCC00;
+            font:16px/26px Georgia, Garamond, Serif;
+            overflow:auto;
+        }
+
+        .tab-scroll h8{
+            color: red;
+            font-size: 1.8em;
+            position: relative;
+            left: 40%;
+            top: 2.4em;
+        }
+
+        .tab-scroll p{
+            color: white;
+            text-align: center;
+            position: relative;
+            top: 2em;
+            font-size: 1.5em;
+            margin: 2em;
+        }
+        .tab-scroll #Q-am{
+            font-size: 2em;
+            position: relative;
+            top: -10px;
+        }
+
+
+        /* HowTo */
+        #HowTo{
+            position: relative;
+            width: 85vw;
+            height: 40em;            
+            left: 8vw;
+            top: 80em;
+            background-color: yellow;
+        }
+
+        .ht-box{
+            display: flex;
+
+        }
+        
+        .ht-box > #divBox{
+            background-color: pink;
+            margin: 10px;
+            padding: 30px;
+            font-size: 30px;
+            position: relative;
+            left: 0%;
+            top: 1em;
+            width: 100vw;
+            height: 70vw;
+        }
+
+        #HowTo h2{
+            text-align: center;
+            position: relative;
+            top: 0.5em;
+            font-size: 3em;
+        }
+ } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 /* @media only screen and (min-width: 992px) {...} */

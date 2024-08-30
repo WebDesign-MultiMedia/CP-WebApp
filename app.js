@@ -1,3 +1,7 @@
+
+
+    // Log required form
+    
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
   'use strict'
@@ -18,6 +22,8 @@
   })
 })()
 
+
+        // Nav bar
   const navBar = document.getElementById('nav-bar');
   const navFun = document.getElementById('list-nav');
   const backGnav = document.getElementById('backg-nav');
@@ -31,24 +37,24 @@
       {
       navFun.style.display = 'none';
       backGnav.style.backgroundColor= 'transparent';
+      backGnav.style.display = 'none';
 
   
      }else{
       navFun.style.display = 'block';
+      backGnav.style.display = 'block';
       backGnav.style.backgroundColor = '#0301016b';
-      backGnav.style.width = '100vw';
+      backGnav.style.width = '105vw';
       backGnav.style.height = '500vw';
       backGnav.style.position = 'fixed';
       backGnav.style.right= '0px';
       backGnav.style.left = '0px';
-      backGnav.style.zIndex = '9';
   
      }
-
-
-
-
   });
+
+
+
 
       
 
