@@ -1,189 +1,12 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
-  /* NAV BAR */
-  .Mobile-Nav {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 38%;
-
-}
-
-.Mobile-Nav > div{
-    position: relative;
-    width: 40px;
-    height: 30px;
-    left: -30px;
-    top:50px;
-    margin: 15px;
-    padding: 45px;
-    background-color: yellow;
-    border-radius: 10%;
-}
-
-.Mobile-Nav > div:hover{
-    background-color: blue;
-}
-
-#nav-links{
-    display: none;
-    position: relative;
-    z-index: 2;
-}
-
-.background-nav{
-    background-color: black;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 2em;
-    position: absolute;
-    z-index: 1;
-    display: none;
-    
-}
-
-/* ICON */
-.fa-clipboard-check{
-    color: white;
-    font-size: 2.5em;
-    position: absolute;
-}
-
-.fa-screwdriver-wrench{
-    position: absolute;
-    font-size: 2em;
-    color: white;
-}
-
-.fa-map-location-dot{
-    font-size: 1.7em;
-    color: white;
-}
-
-.fa-video{
-    color: white;
-    font-size: 2em;
-    position: relative;
-    left: -25px;
-    top: -5px;
-    transform: rotate(920deg);
-}
-
-.fa-book-open-cover{
-    color: white;
-    font-size: 2em;
-    position: absolute;
-    right: 30px;
-}
-
- 
-.fa-bars{
-    position: absolute;
-    left: 5%;
-    top: 25%;
-    color: white;
-}
-
-.navBar{
-    position: absolute;
-    background-color: black;
-    width: 100%;
-    height: 6%;
-    left: 0;
-    top: 0;
-}
-
-      /* GOOGLE MAP */
-    #map{
-        height: 120vw;
-        border: 10px solid blue;
-        position: relative;
-        top: 1em;
-    }
-
-    h1{
-        text-align: center;
-        position: relative;
-        top: 1em;
-        z-index: 2;
-    }
-
-    /* Scroll Box */
-.Scroll-box{
-  height:350px; 
-  width:100%;
-  position: relative;
-  top: 2em;
-  overflow:auto;
-  border-radius: 5%;
-  background-color: yellow;
-  }
-
-  .Scroll-box > li{
-    color: red;
-    position: relative;
-    top: 5em;
-
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
-
-
-:root {
-    --building-color: #FF9800;
-    --house-color: #0288D1;
-    --shop-color: #7B1FA2;
-    --warehouse-color: #558B2F;
-  }
-  
-  /*
-   * Optional: Makes the sample page fill the window.
-   */
   html,
   body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: red;
+    background-color: white;
   }
-  
-  /*
-   * Always set the map height explicitly to define the size of the div element
-   * that contains the map.
-   */
-
-
-  .fa-gas-pump{
-    color: red;
-    font-size: 2em;
-  }
-
-  .fa-tire-flat{
-    color: black;
-    font-size: 2em;
-  }
-  
-  .fa-car-wrench{
-    color: blue;
-    font-size: 2em;
-  }
-  
-  /*
-   * Property styles in unhighlighted state.
-   */
   .property {
     align-items: center;
     border-radius: 50%;
@@ -203,12 +26,11 @@
   .property::after {
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
-    border-top: 9px solid #FFFFFF;
     content: "";
     height: 0;
     left: 50%;
     position: absolute;
-    top: 95%;
+    top: 65%;
     transform: translate(-50%, 0);
     transition: all 0.3s ease-out;
     width: 0;
@@ -281,7 +103,362 @@
     width: 50px;
     height: 50px;
   }
+   /* GOOGLE MAP */
+   #map{
+    height: 120vw;
+    border: 1px solid blue;
+    position: relative;
+    top: 4em;
+    border-radius: 2%;
+}
+
+h1{
+    text-align: center;
+    position: relative;
+    top: 1em;
+    z-index: 2;
+}
+
+  /* GOOGLE MAP ICONS */
+
   
+  .fa-gas-pump{
+    color: rgb(183, 30, 30);
+    font-size: 1.3em;
+  }
+
+  .fa-tire-flat{
+    color: #000000;
+    font-size: 1.3em;
+  }
+  
+  .fa-car-wrench{
+    color: blue;
+    font-size: 1.3em;
+  }
+
+
+  
+
+
+
+    /* NAV BAR */
+    .Mobile-Nav {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: 38%;
+
+  }
+  
+  .Mobile-Nav > div{
+      position: relative;
+      width: 5%;
+      height: 2px;
+      left: -30px;
+      top:50px;
+      margin: 15px;
+      padding: 45px;
+      background-color: red;
+      border-radius: 10%;
+  }
+
+  .Mobile-Nav > div:hover{
+      background-color: blue;
+  }
+
+  #nav-links{
+      display: none;
+  }
+
+  .background-nav{
+      background-color: black;
+      width: 100%;
+      left: 0;
+      top: 0;
+      position: fixed;
+      z-index: -1;
+      display: none;
+  }
+
+  /* ICON */
+  .fa-clipboard-check{
+      color: white;
+      font-size: 2.5em;
+      position: absolute;
+      left: -15px;
+      top: -20px;
+  }
+
+  .fa-screwdriver-wrench{
+      position: absolute;
+      font-size: 2em;
+      color: white;
+      left: 30px;
+      top: 30px;
+  }
+
+  .fa-map-location-dot{
+      font-size: 2em;
+      color: white;
+      position: relative;
+      left: -19px;
+      top: -15px;
+  }
+
+  .fa-video{
+      color: white;
+      font-size: 2em;
+      position: relative;
+      left: -40px;
+      top: -24px;
+      transform: rotate(920deg);
+  }
+
+  .fa-book-open-cover{
+      color: white;
+      font-size: 2em;
+      position: absolute;
+      right: 3px;
+      top: 0.8em;
+  }
+
+   
+  .fa-bars{
+      position: absolute;
+      left: 5%;
+      top: 25%;
+      color: white;
+  }
+
+.navBar{
+      position: absolute;
+      background-color: black;
+      width: 100%;
+      height: 6%;
+      left: 0;
+      top: 0;
+ }
+
+
+
+    /* Scroll Box */
+.Scroll-box{
+  height:35vw; 
+  width:40%;
+  position: relative;
+  left: -10px;
+  top: -29.3em;
+  border-radius: 5%;
+  z-index: 2;
+  float: right;
+  }
+
+  .Scroll-box > p{
+    position: relative;
+    left:-1%;
+    top: 20vw;
+    background-color: goldenrod;
+    border: 1px solid white;
+    border-radius: 10%;
+    
+  }
+
+  .Scroll-box > h3{
+    position: absolute;
+    z-index: 4;
+    top: -40px;
+    right: 0;
+    padding-right: 20px; 
+  }
+
+  #Scroll-box{
+    display: none;
+  }
+
+  .Scroll-box > h3:hover{
+    color: red;
+  }
+
+
+    /* ICON MAP LEGENT */
+  .Scroll-box .fa-tire-flat{
+    font-size: 1em;
+    padding: 11px;
+    position: relative;
+    left: 10px;
+  }
+
+  .Scroll-box .fa-gas-pump{
+    font-size: 1em;
+    padding: 10px;
+    position: relative;
+    left: 10px;
+  }
+
+  .Scroll-box .fa-car-wrench{
+    font-size: 1em;
+    padding: 10px;
+    position: relative;
+    left: 10px;
+  }
+
+  #btn{
+    background-color: gold;
+    border-radius: 10%;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: -2px;  
+    top:  -107vw;
+    float: right;
+    z-index: 1;
+  }
+  
+  
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+
+:root {
+    --building-color: #FF9800;
+    --house-color: #0288D1;
+    --shop-color: #7B1FA2;
+    --warehouse-color: #558B2F;
+  }
+  
+  /*
+   * Optional: Makes the sample page fill the window.
+   */
+  /* html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  } */
+  
+  /*
+   * Always set the map height explicitly to define the size of the div element
+   * that contains the map.
+   */
+
+
+  
+  
+  /*
+   * Property styles in unhighlighted state.
+   */
+  /* .property {
+    align-items: center;
+    border-radius: 50%;
+    color: #263238;
+    display: flex;
+    font-size: 14px;
+    gap: 15px;
+    height: 50px;
+    justify-content: center;
+    padding: 4px;
+    position: relative;
+    position: relative;
+    transition: all 0.3s ease-out;
+    width: 50px;
+  }
+  
+  .property::after {
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid rgba(255, 0, 0, 0.4);
+    content: "";
+    height: 0;
+    left: 50%;
+    position: absolute;
+    top: 65%;
+    transform: translate(-50%, 0);
+    transition: all 0.3s ease-out;
+    width: 0;
+    z-index: 1;
+  }
+  
+  .property .icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .property .icon svg {
+    height: 50px;
+    width: auto;
+  }
+  
+  .property .details {
+    display: none;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .property .address {
+    color: #9E9E9E;
+    font-size: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  
+  .property .features {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .property .features > div {
+    align-items: center;
+    background: #F5F5F5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    font-size: 10px;
+    gap: 5px;
+    padding: 5px;
+  } */
+  
+  /*
+   * Property styles in highlighted state.
+   */
+  /* .property.highlight {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    height: 80px;
+    padding: 8px 15px;
+    width: auto;
+  }
+  
+  .property.highlight::after {
+    border-top: 9px solid #FFFFFF;
+  }
+  
+  .property.highlight .details {
+    display: flex;
+  }
+  
+  .property.highlight .icon svg {
+    width: 50px;
+    height: 50px;
+  }
+   */
 
   
 

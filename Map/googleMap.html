@@ -22,7 +22,7 @@
 <nav class="Mobile-Nav" id="nav-links">
 <div><a href="/MaintenceLoger/MLogger.html"><i class="fa-sharp-duotone fa-solid fa-clipboard-check"></i></a></div>
 
-<div><a href="/AutoParts/AutoParts.html"></a><i class="fa-sharp fa-solid fa-screwdriver-wrench"></i></i></div>
+<div><a href="/AutoParts/AutoParts.html"><i class="fa-sharp fa-solid fa-screwdriver-wrench"></i></a></div>
 
 <div><a href="/Map/googleMap.html"><i class="fa-solid fa-map-location-dot"></i></a></div>
 
@@ -32,14 +32,19 @@
 <h1>Services Map</h1>
 
 <div id="map"></div>
-    
-<div class="Scroll-box">
- <li></li>
- <li></li>
- <li></li>
+
+ <h3><button id="btn">Legend</button></h3> 
+
+<div class="Scroll-box" id="Scroll-box">
+ <p><i class="fa-solid fa-tire-flat fafa"></i> Tire Shop</p>
+ <p><i class="fa-sharp fa-solid fa-gas-pump fafa"></i> Gas Station</p>
+ <p><i class="fa-solid fa-car-wrench fafa"></i> Mechanic Shop</p>
 </div>
-
-
+<!-- 
+<details>
+  <summary>Click here</summary>
+  <p>Here is a map of Gas Stations, <br> Tire Shop, and Mechanic Shop.</p>
+</details> -->
 
   <!-- prettier-ignore -->
   <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
