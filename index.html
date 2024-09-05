@@ -3,30 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="indexStyles.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/2b46095725.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="ManLog.css">
     <title>Document</title>
 </head>
-<body id="Home">
-        <div class="navBar" id="Bar">
-            <i class="fa-solid fa-bars"></i>
-        </div>        
-        <div class="background-nav" id="bg-nav"></div>
+<body>
 
-    <nav class="Mobile-Nav" id="nav-links">
-        <div><a href="index.html"><i class="fa-sharp-duotone fa-solid fa-clipboard-check"></i></a></div>
-        
-        <div><a href="AutoParts.html"><i class="fa-sharp fa-solid fa-screwdriver-wrench"></i></a></div>
-        
-        <div><a href="googleMap.html"><i class="fa-solid fa-map-location-dot"></i></a></div>
-        
-        <div><a href="index.html"><i class="fa-solid fa-video"></i><i class="fa-solid fa-book-open-cover"></i></a></div>
-    </nav>
+    <!-- NAV BAR` -->
+    <div class="navBar" id="Bar">
+        <i class="fa-solid fa-bars"></i>
+    </div>        
+    <div class="background-nav" id="bg-nav"></div>
 
-<h1> Home </h1>
+<nav class="Mobile-Nav" id="nav-links">
+    <div><a href="index.html"><i class="fa-sharp-duotone fa-solid fa-clipboard-check"></i></a></div>
+    
+    <div><a href="AutoParts.html"><i class="fa-sharp fa-solid fa-screwdriver-wrench"></i></a></div>
+    
+    <div><a href="googleMap.html"><i class="fa-solid fa-map-location-dot"></i></a></div>
+    
+    <div><a href="index.html"><i class="fa-solid fa-video"></i><i class="fa-solid fa-book-open-cover"></i></a></div>
+</nav>
 
-<script type="module" src="indexApp.js"></script>    
-</body>
+    <!-- LOGGING -->
+    <h1>Maintence Log</h1>
+        <div id="alertBackground"></div>
+      <form action="https://script.google.com/macros/s/AKfycbxkdFl4FmfyB-3rjdon-pAOyxeyvHhMaMSmA-a_angB6nUq72xEYN0uWagL_iyXUg3UFw/exec" method="post" class="logBox" id="LogBox">
+        <h3>Log Your Services</h3>
+        <input id="date" type="date" name="Date" required>
+        <input type="number" name="Mileage" placeholder="Mileage" required>
+        <input type="text" name="Parts Replaced" placeholder="Parts Parts Changed" required>
+        <input type="text" name="Parts Brand Name" placeholder="Parts Brand Name" required>
+        <input type="number" name="Labor Cost" placeholder="Labor Cost">
+        <input type="text" name="Shop Name" placeholder="Shop Name" required>
+
+        <input type="submit" value="Submit" id="Submit">
+    </form>
+
+    <div class="viewGSheet" id="viewGSheet">
+        <a href="https://accounts.google.com/"><i class="fa-sharp fa-light fa-file-spreadsheet"></i></a>
+    </div>
+
+     <!--AUTO PARTS -->
+     <h1 id="AutoPArts">Auto Part</h1>
+     <div class="slideImg">
+ 
+    <div class="OEM">
+     <h2>OEM</h2>
+     <div id="carouselOEM" class="carousel slide">
+         <div class="carousel-indicators">
+           <button type="button" data-bs-target="#carouselOEM" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+           <button type="button" data-bs-target="#carouselOEM" data-bs-slide-to="1" aria-label="Slide 2"></button>
+           <button type="button" data-bs-target="#carouselOEM" data-bs-slide-to="2" aria-label="Slide 3"></button>
+         </div>
+         <div class="carousel-inner">
+           <div class="carousel-item active">
+             <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API- @RepositoryRestResource.png" class="d-block w-100" alt="...">
+             <div class="carousel-caption d-none d-md-block">
+               <h5>First slide label</h5>
+               <p>Some representative placeholder content for the first slide.</p>
+             </div>
+           </div>
+           <div class="carousel-item">
+             <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API-DELETE-after.png" class="d-block w-100" alt="...">
+             <div class="carousel-caption d-none d-md-block">
+               <h5>Second slide label</h5>
+               <p>Some representative placeholder content for the second slide.</p>
+             </div>
+           </div>
+           <div class="carousel-item">
+             <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API-GET-byID.png" class="d-block w-100" alt="...">
+             <div class="carousel-caption d-none d-md-block">
+               <h5>Third slide label</h5>
+               <p>Some representative placeholder content for the third slide.</p>
+             </div>
+           </div>
+         </div>
+         <i class="fa-solid fa-square-arrow-left"></i>
+           <button class="carousel-control-prev" type="button" data-bs-target="#carouselOEM" data-bs-slide="prev">
+           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Previous</span>
+         </button>
+         <i class="fa-solid fa-square-arrow-right"></i>
+         <button class="carousel-control-next" type="button" data-bs-target="#carouselOEM" data-bs-slide="next">
+           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Next</span>
+         </button>
+       </div>
+     </div> 
+ 
+     <div class="AfterMarket">
+         <h2>AfterMarket</h2>
+         <div id="carouselAfterMarket" class="carousel slide">
+             <div class="carousel-indicators">
+               <button type="button" data-bs-target="#carouselAfterMarket" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+               <button type="button" data-bs-target="#carouselAfterMarket" data-bs-slide-to="1" aria-label="Slide 2"></button>
+               <button type="button" data-bs-target="#carouselAfterMarket" data-bs-slide-to="2" aria-label="Slide 3"></button>
+             </div>
+             <div class="carousel-inner">
+               <div class="carousel-item active">
+                 <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API- @RepositoryRestResource.png" class="d-block w-100" alt="...">
+                 <div class="carousel-caption d-none d-md-block">
+                   <h5>First slide label</h5>
+                   <p>Some representative placeholder content for the first slide.</p>
+                 </div>
+               </div>
+               <div class="carousel-item">
+                 <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API-DELETE-after.png" class="d-block w-100" alt="...">
+                 <div class="carousel-caption d-none d-md-block">
+                   <h5>Second slide label</h5>
+                   <p>Some representative placeholder content for the second slide.</p>
+                 </div>
+               </div>
+               <div class="carousel-item">
+                 <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API-GET-byID.png" class="d-block w-100" alt="...">
+                 <div class="carousel-caption d-none d-md-block">
+                   <h5>Third slide label</h5>
+                   <p>Some representative placeholder content for the third slide.</p>
+                 </div>
+               </div>
+             </div>
+             <i class="fa-solid fa-square-arrow-left"></i>
+             <button class="carousel-control-prev" type="button" data-bs-target="#carouselAfterMarket" data-bs-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Previous</span>
+             </button>
+             <i class="fa-solid fa-square-arrow-right"></i>
+             <button class="carousel-control-next" type="button" data-bs-target="#carouselAfterMarket" data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Next</span>
+             </button>
+           </div>
+ </div>
+ 
+ 
+           <div class="Performance">
+             <h2>Performance</h2>
+           <div id="carouselPerformance" class="carousel slide">
+             <div class="carousel-indicators">
+               <button type="button" data-bs-target="#carouselPerformance" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+               <button type="button" data-bs-target="#carouselPerformance" data-bs-slide-to="1" aria-label="Slide 2"></button>
+               <button type="button" data-bs-target="#carouselPerformance" data-bs-slide-to="2" aria-label="Slide 3"></button>
+             </div>
+             <div class="carousel-inner">
+               <div class="carousel-item active">
+                 <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API- @RepositoryRestResource.png" class="d-block w-100" alt="...">
+                 <div class="carousel-caption d-none d-md-block">
+                   <h5>First slide label</h5>
+                   <p>Some representative placeholder content for the first slide.</p>
+                 </div>
+               </div>
+               <div class="carousel-item">
+                 <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API-DELETE-after.png" class="d-block w-100" alt="...">
+                 <div class="carousel-caption d-none d-md-block">
+                   <h5>Second slide label</h5>
+                   <p>Some representative placeholder content for the second slide.</p>
+                 </div>
+               </div>
+               <div class="carousel-item">
+                 <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API-GET-byID.png" class="d-block w-100" alt="...">
+                 <div class="carousel-caption d-none d-md-block">
+                   <h5>Third slide label</h5>
+                   <p>Some representative placeholder content for the third slide.</p>
+                 </div>
+               </div>
+             </div>
+             <i class="fa-solid fa-square-arrow-left"></i>
+             <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerformance" data-bs-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Previous</span>
+             </button>
+             <i class="fa-solid fa-square-arrow-right"></i>
+             <button class="carousel-control-next" type="button" data-bs-target="#carouselPerformance" data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Next</span>
+             </button>
+           </div>
+       </div>
+ 
+    </div>
+
+    <!-- Google Map -->
+    <h1 id="google-map">Services Map</h1>
+    <div id="map"></div>    
+     <h3 id="GoogleH3"><button id="btn">Legend</button></h3> 
+    <div class="Scroll-box" id="Scroll-box">
+     <p><i class="fa-solid fa-tire-flat fafa"></i> Tire Shop</p>
+     <p><i class="fa-sharp fa-solid fa-gas-pump fafa"></i> Gas Station</p>
+     <p><i class="fa-solid fa-car-wrench fafa"></i> Mechanic Shop</p>
+    </div>
+    
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      
+    <script type="module" src="ManLog.js"></script>
+
+       <!-- prettier-ignore -->
+  <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+    ({key: "AIzaSyB08dmlY-CEs58aLMsylEixteo6HgIgcDE", v: "weekly"});</script>
+
+
+    </body>
 </html>
