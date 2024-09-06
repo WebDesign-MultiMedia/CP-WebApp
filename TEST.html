@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <link rel="stylesheet" href="TEST.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Query Form</title>
+</head>
+<body>
+
+  <input maxlength="17" class="form-control text-uppercase text-box single-line" data-val="true" data-val-maxlength="The field VIN must be a string or array type with a maximum length of '17'." data-val-maxlength-max="17" data-val-required="Please enter VIN" id="VIN" name="VIN" placeholder="Vehicle Identification Number" style="text-transform: uppercase;" title="Partial VINs are also accepted." type="text" value="2HKYF18797H535950" data-has-listeners="true">
+
+
+    <h1>Query Car Data</h1>
+    <form id="carForm">
+        <label for="make">Make:</label>
+        <input type="text" id="make" name="make" placeholder="e.g., Toyota">
+
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" placeholder="e.g., Corolla">
+
+        <label for="year">year:</label>
+        <input type="text" id="year" name="year" placeholder="e.g., 2007">
+
+        <label for="drive">Drive</label>
+        <input type="text" id="drive" name="drive" placeholder="e.g., awd fwd">
+
+
+        <button type="button" onclick="fetchCarData()">Search</button>
+    </form>
+
+    <div id="carsContainer">
+        <!-- Car data will be displayed here -->
+    </div>
+
+
+    <script src="TEST.js"></script>
+</body>
+</html>
+
+
+</body>
+</html>

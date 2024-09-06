@@ -27,7 +27,6 @@
 </nav>
 
     <!-- LOGGING -->
-    <h1>Maintence Log</h1>
         <div id="alertBackground"></div>
       <form action="https://script.google.com/macros/s/AKfycbxkdFl4FmfyB-3rjdon-pAOyxeyvHhMaMSmA-a_angB6nUq72xEYN0uWagL_iyXUg3UFw/exec" method="post" class="logBox" id="LogBox">
         <h3>Log Your Services</h3>
@@ -40,9 +39,38 @@
 
         <input type="submit" value="Submit" id="Submit">
     </form>
-
+    <!-- View info Logged -->
     <div class="viewGSheet" id="viewGSheet">
         <a href="https://accounts.google.com/"><i class="fa-sharp fa-light fa-file-spreadsheet"></i></a>
+    </div>
+
+    <!-- Quick Car Info -->
+    <form id="carForm">    
+        <h2 id="VehicleInfoLookup">Quick Vehicle Details</h2>
+        <label for="make">Make:</label>
+        <input type="text" id="make" name="make" placeholder="e.g., Toyota">
+
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" placeholder="e.g., Corolla">
+
+        <label for="year">Year:</label>
+        <input type="text" id="year" name="year" placeholder="e.g., 2007">
+
+        <label for="drive">Drive</label>
+        <input type="text" id="drive" name="drive" placeholder="e.g., awd fwd">
+
+
+        <button type="button" id="btn-details" onclick="fetchCarData()">Search</button>
+    </form>
+
+    <div id="VinWebsiteLookup">
+      <h4 id="vinTitleSearch">Vin</h4>
+      <a href="https://vpic.nhtsa.dot.gov/decoder/"><i class="fa-sharp fa-solid fa-car"></i>
+      <i class="fa-sharp fa-solid fa-magnifying-glass"></i></a>
+   
+    </div>
+    <div id="carsContainer">
+        <!-- Car data will be displayed here -->
     </div>
 
      <!--AUTO PARTS -->
@@ -203,7 +231,83 @@
 
        <!-- prettier-ignore -->
   <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-    ({key: "AIzaSyB08dmlY-CEs58aLMsylEixteo6HgIgcDE", v: "weekly"});</script>
+    ({key: "AIzaSyB08dmlY-CEs58aLMsylEixteo6HgIgcDE", v: "weekly"});
+    
+    
+
+    // CAR DETAIL API
+    async function fetchCarData() {
+      const url = new URL('https://api.api-ninjas.com/v1/cars');
+      
+      // Collecting input from the form
+      const make = document.getElementById('make').value;
+      const model = document.getElementById('model').value;
+      const year = document.getElementById('year').value;
+      const drive = document.getElementById('drive').value;
+  
+      // Append parameters to the URL if they are not empty
+      if (make) url.searchParams.append('make', make);
+      if (model) url.searchParams.append('model', model);
+      if (year) url.searchParams.append('year', year);
+      if (drive) url.searchParams.append('drive', drive);
+  
+      try {
+          const response = await fetch(url, {
+              method: 'GET',
+              headers: {
+                  'X-Api-Key': 'sExy1uExgTEUIXGunZIidg==62LTiAFkcZNsZwrg'
+              }
+          });
+  
+          if (!response.ok) {
+              throw new Error('Network response was not ok. Status: ' + response.status);
+          }
+  
+          const cars = await response.json();
+          displayCars(cars);
+      } catch (error) {
+          console.error('There was a problem with the fetch operation:', error);
+      }
+  }
+  
+  function displayCars(cars) {
+      const container = document.getElementById('carsContainer');
+      container.innerHTML = ''; // Clear previous contents
+  
+      cars.forEach(car => {
+          const carDiv = document.createElement('div');
+    
+          carDiv.innerHTML = `
+              <h2>${car.make} ${car.model} ${car.year}</h2>
+  
+              <div id="detail">Details:</div>
+              <div id="bold">Drive: ${JSON.stringify(car.drive)}</div>
+              <div  id="bold">Class: ${JSON.stringify(car.class)}</div>
+              <div  id="bold">Fuel Type: ${JSON.stringify(car.fuel_type)}</div>
+              <div  id="bold">Transmission: ${JSON.stringify(car.transmission)}</div>
+              <div  id="bold">Cylinders: ${JSON.stringify(car.cylinders)}</div>
+               <div  id="bold">City MPG: ${JSON.stringify(car.city_mpg)}</div>
+                <div  id="bold">Highway MPG: ${JSON.stringify(car.highway_mpg)}</div>
+              <div  id="bold">Combination MPG: ${JSON.stringify(car.combination_mpg)}</div>
+              <div  id="bold">Displacement: ${JSON.stringify(car.displacement)}</div>
+              
+              
+          `;
+          container.appendChild(carDiv);
+      });
+  }
+
+  const submitbtn = document.getElementById('btn-details');
+
+  submitbtn.addEventListener('click', () =>{
+  
+    setTimeout(() => {
+        const detailInfo = document.getElementById('carsContainer');
+    detailInfo.style.display = 'block';
+    }, -2000);
+  })
+
+</script>
 
 
     </body>
