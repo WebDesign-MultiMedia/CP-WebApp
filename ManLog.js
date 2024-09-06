@@ -22,18 +22,7 @@
       })
 
 
-      // FOR LEGEND
-  btn.addEventListener('click', () =>{
-    const pBox = document.getElementById('Scroll-box');
- 
-    if(pBox.style.display === 'block'){
-      pBox.style.display = 'none';
-    } else{
-      pBox.style.display = 'block';
 
-    }
-
-  });
 
 
 async function initMap() {

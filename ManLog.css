@@ -319,18 +319,18 @@ h2{
     top: 30em;
 }
    .OEM{
-    border: 10px solid purple;
+    border: 5px solid #bc0000;
     position: relative;
    }
 
    .AfterMarket{
-    border: 10px solid red;
+    border: 5px solid black;
     position: relative;
     top: 1em;
    }
 
    .Performance{
-    border: 10px solid blue;
+    border: 5px solid gray;
     position: relative;
     top: 2em;
 
@@ -442,8 +442,11 @@ h2{
     }
      /* GOOGLE MAP */
      #map{
-      height: 120vw;
-      border: 1px solid blue;
+      height: 100vw;
+      width: 90%;
+      left: 5%;
+      border: 5px solid blue;
+      border-top: none;
       position: relative;
       top: 40em;
       border-radius: 2%;
@@ -555,8 +558,8 @@ h2{
     .Scroll-box > p{
       position: relative;
       font-size: 14px;
-      left:-1%;
-      top: 20vw;
+      left:50%;
+      top: 30vw;
       background-color: white;
       border: 1px solid white;
       border-radius: 10%;
@@ -600,31 +603,51 @@ h2{
       left: 10px;
     }
   
-    #btn{
-      background-color: white;
-      border: 1px solid lightsteelblue;
-      border-radius: 5%;
+   
+    #iconLegent{
       position: relative;
-      filter: drop-shadow(-2px 2px 100px black);
-      width: 100px;
-      height: 30px;
-      left: -2px;  
-      top:  270px;
-      float: right;
-      z-index: 1;
-        font-size: 17px;
-        font-weight: 460;
+      bottom: -644px;
+      height: 2.9em;
+      left: 5%;
+      width: 90%;
+      text-align: center;
+      border: 1px solid gold;
+    }
 
+    #iconLegent .fa-tire-flat{
+      position: relative;
+      left: -0em;
+      top: -2px; 
+      font-size: 2em;
+    }
+
+    #iconLegent .fa-car-wrench{
+      position: relative;
+      left: -2.4em;
+      top: 1px; 
+      font-size: 2em;
+
+    }
+
+    #iconLegent .fa-gas-pump{
+      position: relative;
+      left: 3em;
+      top: 1px; 
+      font-size: 2em;
+
+    }
+
+    #iconLegent p{
+      font-size: 0.4em;
+      color: palegreen;
+    }
+
+    .gMap{
+      position: relative;
     }
     
-    #GoogleH3 > button{
-        color: black;
-    }
+  
 
-    #google-map{
-        position: relative;
-        font-size: 2em;
-        top: 20em;    }
  
 
 
