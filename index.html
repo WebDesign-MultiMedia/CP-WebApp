@@ -63,6 +63,8 @@
         <button type="button" id="btn-details" onclick="fetchCarData()">Search</button>
     </form>
 
+    <!-- VIN LOOKUP site -->
+
     <div id="VinWebsiteLookup">
       <h4 id="vinTitleSearch">Vin</h4>
       <a href="https://vpic.nhtsa.dot.gov/decoder/"><i class="fa-sharp fa-solid fa-car"></i>
@@ -73,156 +75,69 @@
         <!-- Car data will be displayed here -->
     </div>
 
-     <!--AUTO PARTS -->
-     <!-- <h1 id="AutoPArts">Auto Part</h1>
-     <div class="slideImg">
- 
-    <div class="OEM">
-     <h2>OEM</h2>
-     <div id="carouselOEM" class="carousel slide">
-         <div class="carousel-indicators">
-           <button type="button" data-bs-target="#carouselOEM" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-           <button type="button" data-bs-target="#carouselOEM" data-bs-slide-to="1" aria-label="Slide 2"></button>
-           <button type="button" data-bs-target="#carouselOEM" data-bs-slide-to="2" aria-label="Slide 3"></button>
-         </div>
-         <div class="carousel-inner">
-           <div class="carousel-item active">
-             <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API- @RepositoryRestResource.png" class="d-block w-100" alt="...">
-             <div class="carousel-caption d-none d-md-block">
-               <h5>First slide label</h5>
-               <p>Some representative placeholder content for the first slide.</p>
-             </div>
-           </div>
-           <div class="carousel-item">
-             <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API-DELETE-after.png" class="d-block w-100" alt="...">
-             <div class="carousel-caption d-none d-md-block">
-               <h5>Second slide label</h5>
-               <p>Some representative placeholder content for the second slide.</p>
-             </div>
-           </div>
-           <div class="carousel-item">
-             <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API-GET-byID.png" class="d-block w-100" alt="...">
-             <div class="carousel-caption d-none d-md-block">
-               <h5>Third slide label</h5>
-               <p>Some representative placeholder content for the third slide.</p>
-             </div>
-           </div>
-         </div>
-         <i class="fa-solid fa-square-arrow-left"></i>
-           <button class="carousel-control-prev" type="button" data-bs-target="#carouselOEM" data-bs-slide="prev">
-           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-           <span class="visually-hidden">Previous</span>
-         </button>
-         <i class="fa-solid fa-square-arrow-right"></i>
-         <button class="carousel-control-next" type="button" data-bs-target="#carouselOEM" data-bs-slide="next">
-           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-           <span class="visually-hidden">Next</span>
-         </button>
-       </div>
-     </div> 
- 
-     <div class="AfterMarket">
-         <h2>AfterMarket</h2>
-         <div id="carouselAfterMarket" class="carousel slide">
-             <div class="carousel-indicators">
-               <button type="button" data-bs-target="#carouselAfterMarket" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-               <button type="button" data-bs-target="#carouselAfterMarket" data-bs-slide-to="1" aria-label="Slide 2"></button>
-               <button type="button" data-bs-target="#carouselAfterMarket" data-bs-slide-to="2" aria-label="Slide 3"></button>
-             </div>
-             <div class="carousel-inner">
-               <div class="carousel-item active">
-                 <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API- @RepositoryRestResource.png" class="d-block w-100" alt="...">
-                 <div class="carousel-caption d-none d-md-block">
-                   <h5>First slide label</h5>
-                   <p>Some representative placeholder content for the first slide.</p>
-                 </div>
-               </div>
-               <div class="carousel-item">
-                 <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API-DELETE-after.png" class="d-block w-100" alt="...">
-                 <div class="carousel-caption d-none d-md-block">
-                   <h5>Second slide label</h5>
-                   <p>Some representative placeholder content for the second slide.</p>
-                 </div>
-               </div>
-               <div class="carousel-item">
-                 <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API-GET-byID.png" class="d-block w-100" alt="...">
-                 <div class="carousel-caption d-none d-md-block">
-                   <h5>Third slide label</h5>
-                   <p>Some representative placeholder content for the third slide.</p>
-                 </div>
-               </div>
-             </div>
-             <i class="fa-solid fa-square-arrow-left"></i>
-             <button class="carousel-control-prev" type="button" data-bs-target="#carouselAfterMarket" data-bs-slide="prev">
-               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-               <span class="visually-hidden">Previous</span>
-             </button>
-             <i class="fa-solid fa-square-arrow-right"></i>
-             <button class="carousel-control-next" type="button" data-bs-target="#carouselAfterMarket" data-bs-slide="next">
-               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-               <span class="visually-hidden">Next</span>
-             </button>
-           </div>
- </div> -->
- 
-<!--  
-           <div class="Performance">
-             <h2>Performance</h2>
-           <div id="carouselPerformance" class="carousel slide">
-             <div class="carousel-indicators">
-               <button type="button" data-bs-target="#carouselPerformance" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-               <button type="button" data-bs-target="#carouselPerformance" data-bs-slide-to="1" aria-label="Slide 2"></button>
-               <button type="button" data-bs-target="#carouselPerformance" data-bs-slide-to="2" aria-label="Slide 3"></button>
-             </div>
-             <div class="carousel-inner">
-               <div class="carousel-item active">
-                 <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API- @RepositoryRestResource.png" class="d-block w-100" alt="...">
-                 <div class="carousel-caption d-none d-md-block">
-                   <h5>First slide label</h5>
-                   <p>Some representative placeholder content for the first slide.</p>
-                 </div>
-               </div>
-               <div class="carousel-item">
-                 <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API-DELETE-after.png" class="d-block w-100" alt="...">
-                 <div class="carousel-caption d-none d-md-block">
-                   <h5>Second slide label</h5>
-                   <p>Some representative placeholder content for the second slide.</p>
-                 </div>
-               </div>
-               <div class="carousel-item">
-                 <img src="/Auto-Images/GLAB - 310.1.1 - SP18 - Spring Data Rest CRUD API-GET-byID.png" class="d-block w-100" alt="...">
-                 <div class="carousel-caption d-none d-md-block">
-                   <h5>Third slide label</h5>
-                   <p>Some representative placeholder content for the third slide.</p>
-                 </div>
-               </div>
-             </div>
-             <i class="fa-solid fa-square-arrow-left"></i>
-             <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerformance" data-bs-slide="prev">
-               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-               <span class="visually-hidden">Previous</span>
-             </button>
-             <i class="fa-solid fa-square-arrow-right"></i>
-             <button class="carousel-control-next" type="button" data-bs-target="#carouselPerformance" data-bs-slide="next">
-               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-               <span class="visually-hidden">Next</span>
-             </button>
-           </div>
-       </div>
- 
-    </div> -->
-
     <!-- Google Map -->
      <div class="gMap">
        
-      <div>Hivtvtvtvtvtvtvtvtvtv</div>
-      <div id="map"></div>   
+
+      <!-- <div id="map"></div>    -->
+
       <div id="iconLegent">
-        <i class="fa-sharp fa-solid fa-car-wrench"><p>Mechanic</p></i>
-        <i class="fa-solid fa-tire-flat"><p>Tire Shop</p></i>
-        <i class="fa-solid fa-gas-pump"><p>Gas Station</p></i>
+        <h3>Services</h3>
+        <a href=""><i class="fa-sharp fa-solid fa-car-wrench"><p>Mechanic shop</p></i></a>
+        <a href=""><i class="fa-solid fa-tire-flat"><p>Tire Shop</p></i></a>
+        <a href=""><i class="fa-solid fa-gas-pump"><p>Gas Station</p></i></a>
       </div>
-    
+     </div>
+
+     <div id="scrollbx">    
+        <h2>Auto Parts Sites</h2>
+        <div class="AfterMArketSites">
+  
+        <h3>Aftermarket Sites</h3>
+          <a href="https://www.rockauto.com/"><img src="https://www.rockauto.com/Images/logoDesktop.png" alt="rockAutpLogo" ></a>
+          <a href="https://www.fcpeuro.com/"><img src="" alt="FCPLogo"></a>
+          <a href="https://www.americantrucks.com/"><img src="" alt=""></a>
+          <a href="https://www.carparts.com/"><img src="" alt=""></a>
+          <a href="https://www.jegs.com/"><img src="" alt=""></a>
+          <a href="https://www.autozone.com/"><img src="" alt=""></a>
+          <a href=""><img src="/Auto-Images/Advance-auto-parts.jpg" alt=""></a>
+          <a href="https://www.partsgeek.com/"><img src="" alt=""></a>
+          <a href=""><img src="/Auto-Images/ecklers-logo.png" alt=""></a>
+          <a href=""><img src="/Auto-Images/A1-Auto.jpg" alt=""></a>
+          <a href=""><img src="/Auto-Images/Amazon-automotive-2.jpg" alt=""></a>
+          <a href=""><img src="/Auto-Images/ebay_motors.jpg" alt=""></a>
+          <a href=""><img src="/Auto-Images/pep-boys--logo.png" alt=""></a>
+        </div>
+
+        <div class="PerformanceSites">
+
+          <h3>Performance Sites</h3>
+          <a href="https://www.summitracing.com/"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSI4OS43cHgiIGhlaWdodD0iNDBweCIgdmlld0JveD0iMTUyIDM3Ny4yIDg5LjcgNDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMTUyIDM3Ny4yIDg5LjcgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjMDAwMDk5IiBkPSJNMjM5LjQsMzg2LjVjLTAuMS0wLjEtMC4xLTAuMS0wLjItMC4xbC0yLjUsMGwxLjctOC4zYzAtMC4xLDAtMC4yLTAuMS0wLjJjLTAuMS0wLjEtMC4yLTAuMS0wLjMsMAoJbC0xMy41LDYuOGMtMC4xLDAtMC4xLDAuMS0wLjEsMC4ybC0wLjQsMS43bC01MS40LDBsNi4xLTljMC4xLTAuMSwwLjEtMC4yLDAtMC4yYy0wLjEtMC4xLTAuMS0wLjEtMC4yLTAuMWgtMTYuNAoJYy0wLjEsMC0wLjEsMC0wLjIsMC4xbC02LjYsOS4xYy0wLjcsMC45LTIuNSwzLjMtMi4yLDYuMmMwLjIsMi4zLDEuMywzLjksMS45LDQuNWwtMi45LDRjLTAuMSwwLjEtMC4xLDAuMSwwLDAuMmw1LjUsMTUuOAoJYzAsMC4xLDAuMSwwLjEsMC4yLDAuMmMwLjEsMCwwLjIsMCwwLjItMC4xbDkuMS0xMi40YzEuMiwxLjUsMy42LDMuNiw4LjEsMy41YzEuNCwwLDIuNi0wLjIsMy41LTAuNGMwLDAsMC4xLDAuMSwwLjIsMC4xbDUzLjMsMAoJYzAuMSwwLDAuMi0wLjEsMC4yLTAuMmwxLjktOS4xbDIuNSwwYzAuMSwwLDAuMi0wLjEsMC4yLTAuMmwyLjYtMTEuN0MyMzkuNSwzODYuNiwyMzkuNCwzODYuNiwyMzkuNCwzODYuNXoiLz4KPGc+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTY1LjYsNDEwLjhoMi40YzAuOSwwLDEuMywwLjUsMS4xLDEuMmMtMC4xLDAuNC0wLjQsMC44LTAuOSwxYzAuMSwwLjYsMC4xLDEuMSwwLjMsMS43aC0xLjZsLTAuMS0yLjIKCQljMC4xLDAsMC4yLDAsMC4zLDBjMC4zLDAsMC42LTAuMSwwLjctMC40YzAuMS0wLjMtMC4xLTAuMy0wLjQtMC4zaC0wLjVsLTAuNywyLjloLTEuNEwxNjUuNiw0MTAuOHoiLz4KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNzEuMyw0MTIuOGwwLjYtMC45aDBsMC4xLDAuOUgxNzEuM3ogTTE3MC4xLDQxNC43bDAuNi0wLjloMS40bDAuMSwwLjloMS42Yy0wLjMtMS4zLTAuNS0yLjYtMC43LTMuOQoJCWgtMS44Yy0wLjksMS4zLTEuOCwyLjYtMi44LDMuOUgxNzAuMXoiLz4KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNzcuMiw0MTQuN2MtMC40LDAtMC45LDAuMS0xLjEsMC4xYy0xLjIsMC0yLjMtMC42LTEuOS0yYzAuNC0xLjQsMS43LTIsMi45LTJjMC4zLDAsMC43LDAuMSwxLDAuMQoJCUwxNzgsNDEyYy0wLjMtMC4xLTAuNi0wLjEtMC45LTAuMWMtMC45LDAtMS4zLDAuNi0xLjQsMWMtMC4xLDAuNiwwLjIsMC45LDAuNywwLjljMC41LDAsMC45LTAuMSwxLjItMC4xTDE3Ny4yLDQxNC43eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE3OC45LDQxMC44aDEuNWwtMSwzLjloLTEuNUwxNzguOSw0MTAuOHoiLz4KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xODEuMiw0MTAuOGgxLjhsMC42LDIuMWgwbDAuNS0yLjFoMS4zbC0xLDMuOWgtMS44bC0wLjctMi4xaDBsLTAuNSwyLjFoLTEuM0wxODEuMiw0MTAuOHoiLz4KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xODkuOCw0MTIuNGwtMC42LDIuMmMtMC42LDAuMS0xLjUsMC4xLTEuOCwwLjFjLTEuMiwwLTIuMy0wLjYtMS45LTJjMC40LTEuNCwxLjctMiwyLjktMgoJCWMwLjUsMCwxLDAuMSwxLjQsMC4xbC0wLjIsMS4xYy0wLjQtMC4xLTAuOC0wLjItMS4yLTAuMmMtMC44LDAtMS4zLDAuNC0xLjUsMS4xYy0wLjEsMC42LDAuMSwwLjksMC42LDAuOWMwLjEsMCwwLjMsMCwwLjQsMAoJCWwwLjEtMC4zaC0wLjRsMC4zLTFMMTg5LjgsNDEyLjRMMTg5LjgsNDEyLjR6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTk1LjQsNDE0LjdIMTkybDEtMy45aDMuNGwtMC4zLDFoLTEuOWwtMC4xLDAuNGgxLjZsLTAuMywxaC0xLjZsLTAuMSwwLjRoMS45TDE5NS40LDQxNC43eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE5OS4xLDQxMS44YzAuNSwwLDAuOCwwLjQsMC43LDFjLTAuMSwwLjYtMC43LDAuOS0xLjEsMC45cy0wLjgtMC40LTAuNy0wLjkKCQlDMTk4LjEsNDEyLjIsMTk4LjYsNDExLjgsMTk5LjEsNDExLjh6IE0yMDAuNiw0MTMuN0wyMDAuNiw0MTMuN2MwLjMtMC4yLDAuNi0wLjcsMC42LTAuOWMwLjQtMS40LTAuNy0yLTEuOS0yCgkJYy0xLjIsMC0yLjYsMC42LTIuOSwyYy0wLjQsMS40LDAuNywyLDEuOSwyYzAuNCwwLDEuNy0wLjEsMi41LTAuMmwwLjQtMS4xTDIwMC42LDQxMy43eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIwMy44LDQxMC44bC0wLjUsMi4xYy0wLjEsMC40LTAuMSwwLjcsMC4zLDAuN2MwLjQsMCwwLjYtMC4zLDAuNy0wLjdsMC41LTIuMWgxLjVsLTAuNywyLjgKCQljLTAuMSwwLjYtMC45LDEuMi0yLjMsMS4yYy0xLjQsMC0xLjktMC42LTEuNy0xLjJsMC43LTIuOEgyMDMuOHoiLz4KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yMDcuMSw0MTAuOGgxLjVsLTEsMy45aC0xLjVMMjA3LjEsNDEwLjh6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjA5LjQsNDEwLjhoMi4zYzAuNSwwLDEuMSwwLjQsMC44LDEuM2MtMC4yLDAuNy0wLjksMS4yLTEuNywxLjJjLTAuMSwwLTAuMiwwLTAuMywwbC0wLjEtMC45aDAuMgoJCWMwLjIsMCwwLjQtMC4xLDAuNS0wLjNjMC4xLTAuMy0wLjEtMC4zLTAuMy0wLjNoLTAuM2wtMC43LDIuOWgtMS40TDIwOS40LDQxMC44eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIxMi4zLDQxNC43bDEtMy45aDJsLTAuMSwyLjFoMGwxLTIuMWgybC0xLDMuOWgtMS4ybDAuNi0yLjZoMGwtMS4yLDIuNmgtMS4zbDAuMS0yLjZoMGwtMC42LDIuNkgyMTIuM3oiCgkJLz4KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yMjEuMyw0MTQuN2gtMy40bDEtMy45aDMuNGwtMC4zLDFoLTEuOWwtMC4xLDAuNGgxLjZsLTAuMywxaC0xLjZsLTAuMSwwLjRoMS45TDIyMS4zLDQxNC43eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIyMy4xLDQxMC44aDEuOGwwLjYsMi4xaDBsMC41LTIuMWgxLjNsLTEsMy45aC0xLjdsLTAuNy0yLjFoMGwtMC41LDIuMWgtMS4zTDIyMy4xLDQxMC44eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIyNy43LDQxMC44aDMuOWwtMC4zLDFoLTEuMmwtMC43LDIuOGgtMS41bDAuNy0yLjhoLTEuMkwyMjcuNyw0MTAuOHoiLz4KPC9nPgo8Zz4KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yNDAuMywzODAuOGMtMC42LDAtMS4xLTAuNS0xLjEtMS4xYzAtMC42LDAuNS0xLjEsMS4xLTEuMWMwLjYsMCwxLjEsMC41LDEuMSwxLjEKCQlDMjQxLjQsMzgwLjMsMjQwLjksMzgwLjgsMjQwLjMsMzgwLjh6IE0yNDAuMywzODFjMC44LDAsMS40LTAuNiwxLjQtMS40YzAtMC44LTAuNi0xLjQtMS40LTEuNGMtMC44LDAtMS40LDAuNi0xLjQsMS40CgkJUzIzOS42LDM4MSwyNDAuMywzODF6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjQwLjYsMzc5LjhjMC4zLDAsMC40LTAuMSwwLjQtMC40YzAtMC4yLDAtMC4zLTAuMi0wLjRjLTAuMS0wLjEtMC4zLTAuMS0wLjQtMC4xaC0wLjd2MS40aDAuM3YtMC42aDAuMwoJCWwwLjMsMC42aDAuM0wyNDAuNiwzNzkuOHogTTI0MCwzNzkuNnYtMC40aDAuNGMwLjEsMCwwLjMsMCwwLjMsMC4yYzAsMC4yLTAuMSwwLjItMC4zLDAuMkgyNDB6Ii8+CjwvZz4KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIzNi4zLDM4OC4zYy0wLjEtMC4xLTAuMS0wLjEtMC4yLTAuMWwtMi41LDBsMS40LTYuNmMwLTAuMSwwLTAuMi0wLjEtMC4yYy0wLjEtMC4xLTAuMi0wLjEtMC4zLDBsLTguOSw0LjQKCWMtMC4xLDAtMC4xLDAuMS0wLjEsMC4ybC0wLjUsMi4zbC0xMy42LDBjLTAuMSwwLTAuMSwwLTAuMiwwLjFsLTEuNiwyLjJsLTAuNy0yLjJjMC0wLjEtMC4xLTAuMi0wLjItMC4ySDE5NWMtMC4xLDAtMC4xLDAtMC4yLDAuMQoJbC0xLjcsMi4zbC0wLjctMi4yYzAtMC4xLTAuMS0wLjItMC4yLTAuMmgtMjEuN2MtMC4xLDAtMC4yLDAuMS0wLjIsMC4ybC0wLjYsMi42Yy0wLjUtMC43LTEuMi0xLjYtMS41LTEuOWw3LjMtMTAuMgoJYzAuMS0wLjEsMC4xLTAuMiwwLTAuM2MwLTAuMS0wLjEtMC4xLTAuMi0wLjFoLTEyLjVjLTAuMSwwLTAuMSwwLTAuMiwwLjFjLTAuMSwwLjEtNiw4LjQtNi4xLDguNWMtMC42LDAuNy0yLDIuNy0xLjgsNC44CgljMC4yLDEuOSwxLjIsMy4xLDEuNSwzLjZsMC4yLDAuMmwwLjcsMC45bC0zLjIsNC4zYzAsMC4xLTAuMSwwLjEsMCwwLjJsNC4xLDEyLjFjMCwwLjEsMC4xLDAuMSwwLjIsMC4yYzAuMSwwLDAuMiwwLDAuMi0wLjEKCWw5LjItMTIuOWMwLDAuMSwwLDAuMywwLDAuNGMwLjEsMS43LDEuNyw0LjksNyw0LjljMy4xLDAsNS4xLTAuOSw2LjQtMS45bC0wLjMsMS4zYzAsMC4xLDAsMC4xLDAsMC4yYzAsMC4xLDAuMSwwLjEsMC4yLDAuMWw0OSwwCgljMC4xLDAsMC4yLTAuMSwwLjItMC4ybDEuOS05LjFsMi41LDBjMC4xLDAsMC4yLTAuMSwwLjItMC4ybDEuNy03LjVDMjM2LjQsMzg4LjQsMjM2LjQsMzg4LjQsMjM2LjMsMzg4LjN6Ii8+CjxnPgoJPHBhdGggZmlsbD0iI0ZGMDAwMCIgZD0iTTE4My43LDM4OS45YzAtMC4xLTAuMS0wLjEtMC4yLTAuMWgtNC41Yy0wLjEsMC0wLjIsMC4xLTAuMiwwLjJsLTIsOS4zYzAsMC4xLTAuMywxLjMtMS40LDEuMwoJCWMtMC4zLDAtMC41LTAuMS0wLjYtMC4zYy0wLjItMC4zLTAuMS0wLjgtMC4xLTAuOWMwLDAsMi4xLTkuMywyLjEtOS4zYzAtMC4xLDAtMC4xLTAuMS0wLjJjMC0wLjEtMC4xLTAuMS0wLjItMC4xaC00LjUKCQljLTAuMSwwLTAuMiwwLjEtMC4yLDAuMmwtMi40LDEwLjdjMCwwLDAsMCwwLDAuMWMwLDAsMC4zLDMuMyw1LjMsMy4zYzUuNiwwLDYuOC0zLjIsNi44LTMuM2wyLjQtMTAuNwoJCUMxODMuNywzOTAuMSwxODMuNywzOTAsMTgzLjcsMzg5Ljl6Ii8+Cgk8cGF0aCBmaWxsPSIjRkYwMDAwIiBkPSJNMjI0LDM5MC4xYzAtMC4xLTAuMS0wLjEtMC4yLTAuMWgtNC41Yy0wLjEsMC0wLjIsMC4xLTAuMiwwLjJsLTIuOSwxMy4zYzAsMC4xLDAsMC4xLDAuMSwwLjIKCQljMCwwLjEsMC4xLDAuMSwwLjIsMC4xaDQuNWMwLjEsMCwwLjItMC4xLDAuMi0wLjJsMi45LTEzLjNDMjI0LDM5MC4yLDIyNCwzOTAuMiwyMjQsMzkwLjF6Ii8+Cgk8cGF0aCBmaWxsPSIjRkYwMDAwIiBkPSJNMjAwLjYsMzkwLjFjMC0wLjEtMC4xLTAuMS0wLjItMC4xaC00LjVjLTAuMSwwLTAuMSwwLTAuMiwwLjFsLTMuMiw0LjNsLTEuMy00LjFjMC0wLjEtMC4xLTAuMi0wLjItMC4yCgkJaC00LjhjLTAuMSwwLTAuMiwwLjEtMC4yLDAuMmwtMy4yLDEzLjNjMCwwLjEsMCwwLjEsMCwwLjJjMCwwLjEsMC4xLDAuMSwwLjIsMC4xaDQuNmMwLjEsMCwwLjItMC4xLDAuMi0wLjJsMS43LTYuNGwxLjMsMy42CgkJYzAsMC4xLDAuMSwwLjEsMC4yLDAuMmMwLjEsMCwwLjIsMCwwLjItMC4xbDIuOC0zLjZsLTEuMyw2LjFjMCwwLjEsMCwwLjEsMC4xLDAuMmMwLDAuMSwwLjEsMC4xLDAuMiwwLjFoNC4zCgkJYzAuMSwwLDAuMi0wLjEsMC4yLTAuMmwzLjItMTMuNEMyMDAuNiwzOTAuMiwyMDAuNiwzOTAuMSwyMDAuNiwzOTAuMXoiLz4KCTxwYXRoIGZpbGw9IiNGRjAwMDAiIGQ9Ik0yMTcuMiwzOTAuMWMwLTAuMS0wLjEtMC4xLTAuMi0wLjFoLTQuNWMtMC4xLDAtMC4xLDAtMC4yLDAuMWwtMy4yLDQuM2wtMS4zLTQuMWMwLTAuMS0wLjEtMC4yLTAuMi0wLjIKCQloLTQuOGMtMC4xLDAtMC4yLDAuMS0wLjIsMC4ybC0zLjIsMTMuM2MwLDAuMSwwLDAuMSwwLDAuMmMwLDAuMSwwLjEsMC4xLDAuMiwwLjFoNC42YzAuMSwwLDAuMi0wLjEsMC4yLTAuMmwxLjctNi40bDEuMywzLjYKCQljMCwwLjEsMC4xLDAuMSwwLjIsMC4yYzAuMSwwLDAuMiwwLDAuMi0wLjFsMi44LTMuNmwtMS4zLDYuMWMwLDAuMSwwLDAuMSwwLjEsMC4yYzAsMC4xLDAuMSwwLjEsMC4yLDAuMWg0LjMKCQljMC4xLDAsMC4yLTAuMSwwLjItMC4ybDMuMi0xMy40QzIxNy4yLDM5MC4yLDIxNy4yLDM5MC4xLDIxNy4yLDM5MC4xeiIvPgoJPHBhdGggZmlsbD0iI0ZGMDAwMCIgZD0iTTE2Ny45LDM5MS42bC0xLjktMi40bDYuMS04LjVjMC4xLTAuMSwwLjEtMC4yLDAtMC4zYzAtMC4xLTAuMS0wLjEtMC4yLTAuMWgtOC4zYy0wLjEsMC0wLjEsMC0wLjIsMC4xCgkJbC01LjUsNy43YzAsMC0wLjEsMC4xLTAuMSwwLjFjLTAuNCwwLjYtMS42LDIuMS0xLjUsMy42YzAuMSwxLjQsMC45LDIuMywxLjIsMi43YzAsMC4xLDAuMSwwLjEsMC4xLDAuMWMwLjcsMC45LDEuMywxLjcsMS42LDIKCQlsLTMuNCw0LjdjMCwwLjEtMC4xLDAuMSwwLDAuMmwyLjcsOC4xYzAsMC4xLDAuMSwwLjEsMC4yLDAuMmMwLjEsMCwwLjIsMCwwLjItMC4xbDguNS0xMS43bDAuMS0wLjFjMC40LTAuNSwxLjUtMi4xLDEuNS0zLjYKCQljMC0xLjQtMC43LTIuMi0wLjktMi41QzE2OCwzOTEuNywxNjcuOSwzOTEuNywxNjcuOSwzOTEuNnoiLz4KCTxwYXRoIGZpbGw9IiNGRjAwMDAiIGQ9Ik0yMzQuMiwzOTBjLTAuMS0wLjEtMC4xLTAuMS0wLjItMC4xbC0yLjQsMGwxLjEtNS4yYzAtMC4xLDAtMC4yLTAuMS0wLjJjLTAuMS0wLjEtMC4yLTAuMS0wLjMsMGwtNSwyLjUKCQljLTAuMSwwLTAuMSwwLjEtMC4xLDAuMmwtMC42LDIuOWgtMWMtMC4xLDAtMC4yLDAuMS0wLjIsMC4ybC0wLjksNGMwLDAuMSwwLDAuMSwwLjEsMC4yYzAsMC4xLDAuMSwwLjEsMC4yLDAuMWgwLjlsLTEuOSw5CgkJYzAsMC4xLDAsMC4xLDAuMSwwLjJjMCwwLjEsMC4xLDAuMSwwLjIsMC4xaDQuNmMwLjEsMCwwLjItMC4xLDAuMi0wLjJsMS45LTkuMWwyLjUsMGMwLjEsMCwwLjItMC4xLDAuMi0wLjJsMC45LTQuMQoJCUMyMzQuMywzOTAuMSwyMzQuMywzOTAuMSwyMzQuMiwzOTB6Ii8+CjwvZz4KPC9zdmc+Cg==" alt=""></a>
+          <a href="https://www.maperformance.com/"><img src="https://www.maperformance.com/cdn/shop/files/MAP-logo-v7_5b92b483-9460-4a10-8b1a-b80134273fc6.webp?v=1666817380" alt=""></a>
+          <a href="https://www.lethalperformance.com/"><img src="https://www.lethalperformance.com/skin/frontend/rwd/lethalnew/images/logo.png" alt=""></a>
+          <a href="https://www.urotuning.com/"><img src="https://www.urotuning.com/cdn/shop/t/145/assets/logo.png?v=148649326646224951151724863571" alt=""></a>
+          <a href="https://www.vividracing.com/"><img src="https://www.vividracing.com/templates/vr23/images/vr-logo-large.webp" alt="">Vivid Racing</a>
+          <a href="https://autoplicity.com/"><img src="https://autoplicity.com/Themes/Autoplicity/Content/images/logo.webp" alt="">AutoPolicity</a>
+          <a href="https://www.americanmuscle.com/"><img src="https://www.americanmuscle.com/" alt="">American Muslce</a>
+          <a href="https://www.turnermotorsport.com/"><img src="https://www.turnermotorsport.com/" alt="">Turner Motorsport</a>
+          <a href="https://www.rallysportdirect.com/"><img src="https://ftspeed-apg.bloomreach.io/delivery/resources/content/gallery/logo/logo_rallysportdirect.png?width=198&height=42&crop=center" alt="">RallySport Direct</a>
+          <a href="https://www.tirerack.com/content/tirerack/desktop/en/homepage.html"><img src="https://www.tirerack.com/content/dam/tirerack/logos/TireRack.png" alt="">Tire Rack</a>
+
+        </div>
+     </div>
+
+     <div class="DashLightInfo">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
      </div>
    
     

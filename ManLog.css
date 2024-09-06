@@ -109,7 +109,7 @@
         background-color: black;
         border: 2px solid red;
         width: 100%;
-        height: 300px;
+        height: 350px;
         position: relative;
         top: 10em;
         border-radius: 5%;
@@ -127,7 +127,7 @@
         background-color: darkgrey;
         display: flex;
         justify-content: center;
-        margin: 5px;
+        margin: 10px;
         flex-direction: row;
         color: white;
         position: relative;
@@ -152,6 +152,13 @@
         background-color: blue;
     }
 
+    #Submit:hover{
+      background-color: #0082cb;
+
+    }
+
+  
+
    
 
     /* VIEW BOX */
@@ -161,18 +168,18 @@
     border-top: none;
     position: relative;
     top: 9.8em;
-    width: 50%;
-    height: 45px;
-    left: 20%;
+    width: 55%;
+    height: 60px;
+    left: 21%;
     border-radius: 5%;
     /* border: 2px solid black; */
   }
 
   .fa-file-spreadsheet{
     position: relative;
-    left: 45%;
+    left: 40%;
     top: -3px;
-    font-size: 2.2em;
+    font-size: 3em;
     color: green;
     font-weight: bolder;
   }
@@ -191,7 +198,7 @@
    #carForm{
     position: relative;
     top: 13em;
-    height: 400px;
+    height: 405px;
 
     border: 2px solid red;
     border-radius: 5%;
@@ -219,9 +226,17 @@
     position: absolute;
     left: 30%;
     width: 30vw;
-    bottom: 1em;
-    
+    bottom: 10px;
+    background-color: blue;
+    color: white;
+    z-index: 5;
+
   }
+
+  #btn-details:hover{
+    background-color: #0082cb;
+  }
+ 
 
   #carsContainer{
     /* display: flex;
@@ -230,9 +245,9 @@
     text-align: left; */
     background-color: black;
     position: relative;
-    width: 70vw;
-    height: 300px;
-    top:7em;
+    width: 70%;
+    height: 310px;
+    top:7.2em;
     left: 29%;
     text-align: center;
     border-radius: 5%;
@@ -271,8 +286,11 @@
     font-size: 3em;
     position: absolute;
     left: 20%;
+    z-index: 5;
     top: 0.5em;
   }
+
+
 
   .fa-magnifying-glass{
     color: white;
@@ -280,6 +298,11 @@
     position: absolute;
     left: 30%;
     top: 1em;
+    z-index: 5;
+  }
+
+  .fa-magnifying-glass:hover{
+    color: #0082cb;
   }
 
   #vinTitleSearch {
@@ -289,52 +312,6 @@
     left: 10%;
   }
 
-    /* SLIDE SHOW */
-#AutoPArts{
-    text-align: center;
-    position: relative;
-    top:17em;
-}
-
-h2{
-    text-align: center;
-}
-
-.fa-square-arrow-left{
-    font-size: 2em;
-    position: absolute;
-    top: 1.5em;
-    
-}
-.fa-square-arrow-right{
-    font-size: 2em;
-    position: absolute;
-    top: 1.5em;
-    right: 0;
-}
-
-
-.slideImg{
-    position: relative;
-    top: 30em;
-}
-   .OEM{
-    border: 5px solid #bc0000;
-    position: relative;
-   }
-
-   .AfterMarket{
-    border: 5px solid black;
-    position: relative;
-    top: 1em;
-   }
-
-   .Performance{
-    border: 5px solid gray;
-    position: relative;
-    top: 2em;
-
-}
 
 
     /* Google Map */
@@ -603,61 +580,449 @@ h2{
       left: 10px;
     }
   
+   .gMap{
+    background-color: black;
+    border: 2px solid red;
+    width: 25.5vw;
+    border-radius: 5%;
+    left: 2%;
+    top: 71em;
+    height: 310px;
+    position: absolute;
+    z-index: 5;
+   }
+
+
+   #iconLegent h3{
+    text-align: center;
+    font-size: 5vw;
+    color: red;
+   }
+
+   .fa-car-wrench{
+    font-size: 3em;
+    position: relative;
+    left: 22%;
+    
+   }
+
+   .fa-car-wrench:hover{
+    color: lightblue;
+
+   }
+
+   .fa-car-wrench p{
+    font-size: 3vw;
+    text-align: center;
+    color: white;
+    position: relative;
+    left: -20%;
+    top: 10px;
+   }
+
+   .fa-tire-flat{
+    font-size: 3em;
+    position: relative;
+    left: 20%;
+    top: 5px;
+    color: gray;
+   }
    
-    #iconLegent{
-      position: relative;
-      bottom: -644px;
-      height: 2.9em;
-      left: 5%;
-      width: 90%;
-      text-align: center;
-      border: 1px solid gold;
+
+   .fa-tire-flat p{
+    font-size: 3vw;
+    text-align: center;
+    color: white;
+    position: relative;
+    left: -10%;
+    top: 10px;
+   }
+
+   .fa-tire-flat:hover{
+    color: lightgray;
+   }
+
+   .fa-gas-pump{
+    font-size: 3em;
+    position: relative;
+    left: 25%;
+    top: 20px;
+   }
+
+   .fa-gas-pump:hover{
+    color: lightcoral;
+   }
+
+   .fa-gas-pump p{
+    font-size: 3.2vw;
+    text-align: center;
+    color: white;
+    position: relative;
+    left: -30%;
+    top: 5px;
+  }
+
+
+
+  }
+
+ 
+
+/* 
+    #iconLegent .fa-car-wrench{
+      position: absolute;
+      font-size: 2em;
+      left: 2%;
+      font-size: 2em;
+    }
+
+    .fa-car-wrench p{
+      color: white;
+      font-size: 3vw;
     }
 
     #iconLegent .fa-tire-flat{
-      position: relative;
-      left: -0em;
-      top: -2px; 
+      position: absolute;
+      left: 35%;
       font-size: 2em;
     }
 
-    #iconLegent .fa-car-wrench{
-      position: relative;
-      left: -2.4em;
-      top: 1px; 
-      font-size: 2em;
-
+    .fa-tire-flat p{
+      color: white;
+      font-size: 3vw;
     }
 
     #iconLegent .fa-gas-pump{
-      position: relative;
-      left: 3em;
-      top: 1px; 
+      position: absolute;
+      left: 67%;
       font-size: 2em;
-
     }
 
-    #iconLegent p{
-      font-size: 0.4em;
-      color: palegreen;
+    .fa-gas-pump p{
+      color: white;
+      font-size: 2.5vw;
     }
+ */
 
-    .gMap{
-      position: relative;
-    }
-    
+
+
+ 
   
 
  
 
 
-}
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+
+  body{
+    background-color: lightgreen;
+  }
+
+  #Bar i{
+    position: absolute;
+    font-size: 2em;
+    z-index: 1;
+    color: white;
+    top: 1%;
+    left: 5%;
+
+  }
+
+  #bg-nav{
+    background-color: #000000;
+    width: 100%;
+    height: 60px;
+  }
+
+  #nav-links{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 5px;
+  }
+  #nav-links i{
+    width: 100px;
+    font-size: 3em;
+    
+  }
+
+
+  /* LOG BOX */
+  #LogBox{
+    background-color: #0082cb;
+    width: 50%;
+    height: 500px;
+    position: relative;
+    left: 5%;
+    top: 200px;
+    border-radius: 5%;
+  }
+
+  #LogBox > h3{
+    color: red;
+    text-align: center;
+    font-size: 2em;
+  }
+
+  #LogBox > input{
+    color: red;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5%;
+    left: 15%;
+    position: relative;
+    text-align: center;
+    margin: 10px;
+    top: 2em;
+    width: 60%;
+    height: 40px;
+  }
+
+  /* VIEW LOG SHEED */
+  .viewGSheet{
+    position: relative;
+    height: 100px;
+    width: 130px;
+    float: right;
+    top: -300px;
+    left: -28.5%;
+    border-radius: 5%;
+    background-color: #0082cb;
+  }
+
+  .fa-file-spreadsheet{
+    color: green;
+    font-size: 8vw;
+    position: relative;
+    left: 30%;
+    top: 15px;
+  }
+
+  .fa-file-spreadsheet:hover{
+    color: lightgreen;
+  }
+
+  /* SERVICES MAP */
+
+  /* .gMap{
+    width: 130px;
+    height: 300px;
+    background-color: #0082cb;
+    float: right;
+    position: relative;
+    top: -350px;
+    left: -28.5%;
+    border-radius: 5%;
+  }
+
+  /* QUICK INFO */
+
+  #carForm{
+    background-color: #0082cb;
+    width: 50%;
+    height: 500px;
+    position: relative;
+    float: left;
+    left: 5%;
+    top: 13.5em;
+    border-radius: 5%;
+  } 
+
+  #carForm > input{
+    color: red;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5%;
+    left: 15%;
+    position: relative;
+    text-align: center;
+    margin: 1px;
+    top: 2em;
+    width: 60%;
+    height: 40px;
+  }
+
+  #carForm > label{
+    position: relative;
+    left: 16%;
+    top: 14%;
+    font-size: 1.2em;
+    z-index: 2;
+    color: red;
+  }
+
+  #btn-details{
+    position: absolute;
+    left:25%;
+    top: 80%;
+    width: 40%;
+    height: 10%;
+  }
+
+  #carsContainer{
+    width: 40%;
+    top: 7.4em;
+    left: -20px;
+    position: relative;
+    border-radius: 5%;
+    height: 305px;
+    background-color: red;
+    float: right;
+  }
+
+
+  /* MAP SERVICES */
+  .gMap{
+    background-color:#0082cb;
+    height: 315px;
+    width: 130px;
+    float: right;
+    position: relative;
+    bottom: 600px;
+    left: -28.5%;
+    border-radius: 4%;
+  }
+
+  #iconLegent > a{
+    color: white;
+    text-align: center;
+  }
+
+  .fa-car-wrench{
+    font-size: 5vw;
+  }
+
+  .fa-car-wrench p{
+    color: red;
+    font-size: 2vw;
+  }
+
+  .fa-tire-flat{
+    font-size: 5vw;
+    position: absolute;
+    left: 15%;
+  }
+
+  .fa-tire-flat p{
+    font-size: 2vw;
+    position: relative;
+    left: 1%;
+  }
+
+  .fa-gas-pump{
+    font-size: 5vw;
+    position: relative;
+    top: 80px;
+  }
+
+  .fa-gas-pump p{
+    position: relative;
+    font-size: 2vw;
+    top: 2px;
+    padding: 2px;
+  }
+
+
+  /* VIN LOOPUP SITE */
+  #VinWebsiteLookup{
+    position: relative;
+    width: 13%;
+    height: 95.5px;
+    left: 1%;
+    background-color: #0082cb;
+    float: right;
+    top: -18.6em;
+    border-radius: 5%;
+  }
+
+  .fa-car{
+    color: red;
+    font-size: 3em;
+    position: absolute;
+    left: 25%;
+    z-index: 5;
+    top: 0.5em;
+  }
+
+
+
+  .fa-magnifying-glass{
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    left: 35%;
+    top: 1em;
+    z-index: 5;
+  }
+
+  .fa-magnifying-glass:hover{
+    color: #0082cb;
+  }
+
+  /* Footer */
+
+  .AfterMArketSites{
+    position: absolute;
+    top: 85em;
+    left: 1%;
+    width: 90%;
+    height: 100px;
+  }
+
+  #scrollbx h2{
+    position: absolute;
+    left: 6.5em;
+    padding-top: 40px;
+    font-size: 2.5em;
+  }
+
+  .AfterMArketSites h3{
+    position: absolute;
+    left: 35%;
+    font-size:2em;
+    top: 2em;
+
+
+  }
+
+  .AfterMArketSites {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
+
+  .AfterMArketSites img{
+    width: 15vw;
+    height: 79px;
+    position: relative;
+    padding: 10px;
+    left: 30%;
+    top: 100px;
+  }
+
+  
+#scrollbx{
+  height:100em;
+  width:100%;
+  border:1px solid #ccc;
+  font:16px/26px Georgia, Garamond, Serif;
+  overflow:auto;
+  background-color: #0082cb;
+
+}
+
+
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+  
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {}
