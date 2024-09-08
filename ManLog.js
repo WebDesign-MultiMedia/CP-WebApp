@@ -14,12 +14,9 @@
 
       // FOR FORM
       const submitMessage = document.getElementById('Submit');
-
-      submitMessage.addEventListener('click', () =>{
-          alert("ThanK you for Loggin! ") 
-    const alertBG = document.getElementById('alertBackground');
- 
-      })
+      submitMessage.addEventListener('click', () =>{    
+  alert("Thank you for Loggin! ");
+  })
 
 
 
