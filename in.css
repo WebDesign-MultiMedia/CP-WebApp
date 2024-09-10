@@ -1,0 +1,389 @@
+body{
+    background-color: lightblue;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    /* NAV BAR */
+
+    nav{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: antiquewhite;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        z-index: 3;
+    }
+
+    nav > div{
+     border: 2px solid red;
+     position: relative;
+     width: 20%;
+     text-align: center;
+    }
+
+  
+    #more {
+        background-color: aqua;
+        border: 1px solid red;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        border-radius: 100%;
+        left: 20%;
+        top: 2px;
+    }
+
+     #menuOption .fa-bars{
+        position: absolute;
+        top: 12px;
+        z-index: 2;
+        font-size: 1.2em;
+        right: 43%;
+    }
+    .fa-bars:hover{
+        color: red;
+    }
+    
+    #menuOption .fa-arrow-up{
+        position: absolute;
+        top: 12px;
+        z-index: 2;
+        font-size: 1.2em;
+        right: 44%;
+        display: none;
+    }
+
+
+    #MoreMenu{
+        height: 270px;
+        position: absolute;
+        top: -290px;
+        left: -40vw;
+        z-index: 2;
+        display: none;
+}   
+    #MoreMenu >li{
+        background-color:aqua;
+        border-radius: 3%;
+        margin: 20px;
+        height: 30px;
+        width: 80vw;
+
+}
+
+#MoreMenu >li:hover{
+    background-color: aquamarine;
+}
+
+
+
+
+
+
+
+
+
+    /* 
+    
+    
+    Vehicle Body 
+    
+    
+    */
+
+    #Vehicle h1{
+        text-align: center;
+    }
+
+    #VehicleOwnersRecordBody{
+        position: relative;
+        height: 600px;
+        width: 100%;
+        background-color: red;
+        border: 1px solid yellow;
+        z-index: 2;
+    }
+
+
+
+    #test{
+        width: 60%;
+        position: relative;
+        left: 19%;
+        background-color: yellow;
+    }
+
+    .VehicleOwnersRecordBody fieldset{
+        position: absolute;
+        display: none;
+        z-index: 5;
+
+
+    }
+
+
+
+ .VehicleOwnersRecordBody .fa-trash-can-xmark{
+    color: blue;
+    position: relative;
+    float: right;
+    right: 50px;
+    top: 7px;
+ }
+ .fa-trash-can-xmark:hover{
+    color: lawngreen;
+ }
+
+ .VehicleOwnersRecordBody .fa-circle-plus{
+    color: blue;
+    position: relative;
+    float: right;
+    top: 7px;
+ }
+
+ .AddOrDelete{
+    width: 100%;
+    height: 500px;
+    top:10em ;
+    background-color: rgb(41, 127, 203);
+    position: relative;
+ }
+
+    
+
+    /*
+
+
+
+
+        TAX DEPENDENT
+
+
+
+    
+    */
+ 
+    /* TAX HEADDER */
+
+    #TaxDependent{
+        position: absolute;
+        top: 50px;
+    }
+    #TaxDependentOptions{
+        width: 80%;
+        position: absolute;
+        z-index: 3;
+        border: 2px solid red;
+        left: 15%;
+    }
+
+    #TaxDependentOptions summary{
+        background-color: lightblue;
+        height: 40px;
+        text-align: center;
+        top: -20px;
+        font-size: 4.3vw;
+    }
+    
+
+
+    #TaxDependentOptions li{
+        text-align: center;
+        position: relative;
+    }
+    
+    
+    #TaxDependentOptions li:hover{
+        background-color: aqua;
+    }
+
+    #TaxDependentForm{
+        position: relative;
+        height: 900px;
+        width: 100%;
+    }
+
+    #TaxDependentForm fieldset{
+        position: relative;
+        z-index: 2;
+    }
+    
+
+    #ProofOfRelationshipField{
+        position: relative;
+        z-index: 9;
+        display: none;
+    }
+
+    #TaxDependent > div{
+        width: 20px;
+        position: relative;
+        padding: 15px;
+    }
+
+      /* ADD / DELETE BOX */
+
+   .TaxDependentForm #AddOrDeleteBox{
+    width: 100%;
+    height: 100%;
+    border: 1px solid blue;
+    background-color: antiquewhite;
+    position: absolute;
+    top:50vw;
+    border-radius: 2%;
+ 
+
+    #TaxDependentForm fieldset{
+        position: absolute;
+        top: 18em;
+    }
+        
+    #TaxDependentForm  #ProofOfRelationshipField{
+        background-color: antiquewhite;
+    }
+
+    #TaxDependentForm #ProofOfIdentityField{
+        background-color: aqua;
+    }
+
+    #TaxDependentForm #ProofOfResidencyField{
+        background-color: aquamarine;
+    }
+
+    #TaxDependentForm #ProofOfFinancialRecordsField{
+        background-color: bisque;
+    }
+
+    #TaxDependentForm #ChildCareExpensesField{
+        background-color: blanchedalmond;
+    }
+
+    #TaxDependentForm #MedicalExpensesField{
+        background-color: blue;
+    }
+
+    #TaxDependentForm #EducationExpensesField{
+        background-color: brown;
+    }
+
+    #TaxDependentForm #AlimonyAndChildSupportField{
+        background-color: cadetblue;
+    }
+
+    #TaxDependentForm #LegalDocumentsField{
+        background-color: black;
+    }
+
+    #TaxDependentForm #SupportProvidedDependtsField{
+        background-color: chartreuse;
+    }
+
+
+
+  
+   }
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+
+
+        /* Vehicle Record Drop-Down */
+
+        details{
+            background-color: white;
+            position: relative;
+            width: 15%;
+        }
+        
+        details > li{
+            list-style: none;
+        }
+        
+        li:hover{
+            background-color: aquamarine;
+        }
+
+        /* Vehicle Body Record Section */
+
+.VehicleOwnersRecordBody{
+    position: absolute;
+    width: 90%;
+    border: 1px solid red;
+    height: 100%;
+}
+#VehicleInformation {
+
+}
+.VehicleInformation fieldset{
+width: 10%;
+background-color: lightcoral;
+/* position: absolute; */
+}
+
+.MaintenanceAndRepairRecords fieldset{
+width: 10%;
+background-color: lightcyan;
+/* position: absolute;
+display: none; */
+
+
+}
+
+.FuelRecord fieldset{
+width: 10%;
+background-color: lightgoldenrodyellow;
+/* position: absolute;
+display: none; */
+
+
+}
+
+.VehicleRegistration fieldset{ 
+width: 10%;
+background-color: lightgreen;
+/* position: absolute;
+display: none; */
+
+
+}
+
+.InsuranceRecords fieldset{
+width: 10%;
+background-color: lightsalmon;
+/* position: absolute;
+display: none; */
+
+
+    
+}
+
+.AccidentRecords fieldset{
+width: 10%;
+background-color: lightseagreen;
+/* position: absolute;
+display: none; */
+
+
+}
+
+#vi{
+    color: red;
+}
+

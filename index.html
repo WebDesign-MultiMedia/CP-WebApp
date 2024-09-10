@@ -1,264 +1,613 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/2b46095725.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="ManLog.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <link rel="stylesheet" href="in.css">
+
+  <script src="https://kit.fontawesome.com/2b46095725.js" crossorigin="anonymous"></script>
+
+  <title>Document</title>
 </head>
 <body>
+<!-- 
+  <i class="fa-solid fa-file"></i>
+  <i class="fa-duotone fa-solid fa-briefcase-blank"></i>
+  <i class="fa-sharp-duotone fa-solid fa-business-time"></i>
 
-    <!-- NAV BAR` -->
-    <div class="navBar" id="Bar">
-        <i class="fa-solid fa-bars"></i>
-    </div>        
-    <div class="background-nav" id="bg-nav"></div>
-
-<nav class="Mobile-Nav" id="nav-links">
-    <div><a href="index.html"><i class="fa-sharp-duotone fa-solid fa-clipboard-check"></i></a></div>
-    
-    <div><a href="AutoParts.html"><i class="fa-sharp fa-solid fa-screwdriver-wrench"></i></a></div>
-    
-    <div><a href="googleMap.html"><i class="fa-solid fa-map-location-dot"></i></a></div>
-    
-    <div><a href="index.html"><i class="fa-solid fa-video"></i><i class="fa-solid fa-book-open-cover"></i></a></div>
-</nav>
-
-    <!-- LOGGING -->
-        <div id="alertBackground"></div>
-      <form action="https://script.google.com/macros/s/AKfycbwV-uBy1F-SXagxT9IWnyF_fMH5nDIuQE82uQIraDaaSFTsv6lxuLTXi9UX1ntykvHn6A/exec" method="post" class="logBox" id="LogBox">
-        <h3>Log Your Services</h3>
-        <input id="date" type="date" name="Date" required>
-        <input type="number" name="Mileage" placeholder="Mileage" required>
-        <input type="text" name="Parts Replaced" placeholder=" Parts Changed/Replaced" required>
-        <input type="text" name="Which Side" placeholder="Which Side" required>
-        <input type="text" name="Parts Brand Name" placeholder="Parts Brand Name" required>
-        <input type="number" name="Labor Cost" placeholder="Labor Cost">
-        <input type="text" name="Mechanic Shop Name" placeholder= "optional: Shop Name ">
-        <input type="text" name="Website Purchase" placeholder="optional: Website Name">
-        <input type="text" name="Retail Purchase" placeholder="optional: Retail Name">
-        <input type="submit" value="Submit" id="Submit" >
-    </form>
-
-    <!-- View info Logged -->
-    <div class="viewGSheet" id="viewGSheet">
-        <a href="https://docs.google.com/spreadsheets/d/1NfVTXQLWFTOT2UMckPs2h8eV9KeCKvn7V957IYrVpVs/edit?gid=33984916#gid=33984916"><i class="fa-sharp fa-light fa-file-spreadsheet"></i></a>
-    </div>
+  <i class="fa-solid fa-file"></i>
+  <i class="fa-duotone fa-solid fa-user-plus"></i> -->
 
 
-    <div class="liveGraph">
-      <iframe width="640" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTrWNDsMkcwXNCEtnKfNFxP478s9bU2GQImDlJGnz65HTRZF4p1pm5Qyh_CpZdPkmDVy47PRlB9AX6f/pubchart?oid=1560258985&amp;format=image"></iframe>    </div>
+        <!-- NAV BAR -->
+  <nav>
+    <div>  <a href=""><i class="fa-solid fa-user"></i></a></div>
+    <div> <a href="">Profile</a></div>
+    <div id="menuOption">
+        <i class="fa-solid fa-arrow-up" id="fa-arrow-up"></i>
+        <i class="fa-solid fa-bars" id="fa-bars"></i>
 
-    <!-- Quick Car Info -->
-    <form id="carForm">    
-        <h2 id="VehicleInfoLookup">Quick Vehicle Details</h2>
-        <label for="make">Make:</label>
-        <input type="text" id="make" name="make" placeholder="e.g., Toyota">
-
-        <label for="model">Model:</label>
-        <input type="text" id="model" name="model" placeholder="e.g., Corolla">
-
-        <label for="year">Year:</label>
-        <input type="text" id="year" name="year" placeholder="e.g., 2007">
-
-
-        <button type="button" id="btn-details" onclick="fetchCarData()">Search</button>
-    </form>
-
-
-
-    <!-- VIN LOOKUP site -->
-
-    <div id="VinWebsiteLookup">
-      <h4 id="vinTitleSearch">Vin</h4>
-      <a href="https://vpic.nhtsa.dot.gov/decoder/"><i class="fa-sharp fa-solid fa-car"></i>
-      <i class="fa-sharp fa-solid fa-magnifying-glass"></i></a>
-   
-    </div>
-    <div id="carsContainer">
-        <!-- Car data will be displayed here -->
-    </div>
-
-
-     <div class="gMap">       
-      <div id="iconLegent">
-        <h3>Services Map</h3>
-        <a href=""><i class="fa-sharp fa-solid fa-car-wrench"><p>Mechanic shop</p></i></a>
-        <a href=""><i class="fa-solid fa-tire-flat"><p>Tire Shop</p></i></a>
-        <a href=""><i class="fa-solid fa-gas-pump"><p>Gas Station</p></i></a>
-      </div>
-     </div>
-
-
-
-     <!-- How-To Guide -->
-
-      <!-- <div class="HowToGuide">
-        <h2>How-To Guide</h2>
-        <div>
-          <h3>How-To Videos</h3>
-          <a href="https://www.carcarekiosk.com/"><img src="https://www.carcarekiosk.com/img/logo.svg" alt=""></a>
+      <a href="" id="plus">
+        <div id="more">    
+        <div id="MoreMenu">
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
         </div>
-        <div>
-          <h3>How A Car Works</h3>
-          <a href="https://www.howacarworks.com/basics"><img src="https://www.howacarworks.com/assets/open-graph-image.en-d4992f8c59b6a1be431b2e4174dd478cd130f987bed8664a0eff19963abb408e.png" alt=""></a>
-        </div>
-        <div>
+      </div> 
+       </a>
+
+    </div>
+    <div>  <a href="">Profile</a></div>
+    <div><a href="">Profile</a></div>
+  </nav>
+
+
+  <h1>Record Suite</h1>
+
+  
+      <!-- Vehicle Owner Records -->
+  <div class="VehicleOwnersRecordBody" id="VehicleOwnersRecordBody"> 
+    <!-- Drop Down List -->
+    <span id="Vehicle"> 
+      <h1>Vehicle Owner Records</h1>
+    <details id="test">
+      <summary>What are you going Log Today?</summary>
+      <li id="VehicleInfor">Vehicle Information</li>
+      <li id="VehicleMan">Maintenance & Repairs</li>
+      <li id="VehicleFuel">Vehicle Fuel Log</li>
+      <li id="VehicleRegis">Vehicle Registration</li>
+      <li id="VehicleInsur">Vehicle Insurance</li>
+      <li id="VehicleAcci">Vehicle Accident Log</li>
+     </details>
+    </span>
+ 
+  
+            <!-- Vehicle Information -->
+    <div class="VehicleInformation" >  
+      <!-- <h3>Vehicle Information</h3> -->
+               <!-- Form -->
+      <form action="" method="post">
+        <fieldset id="VehicleInformation">
+          <legend>Vehicle Information</legend>
+          <label for="">VIN</label>
+          <input type="number" id="" name="" autofocus>
+          <br>
+          <label for="">Make</label>
+          <input type="text" name="" id="">
+          <br>
+          <label for="">Model</label>
+          <input type="text" name="" id="">
+          <br>
+          <label for="">Year</label>
+          <input type="number" name="" id="">
+          <br>
+          <label for="">Insurance Policy Details</label>
+          <input type="text" name="" id="">
+          <br>
           
-        </div>
-      </div> -->
+          <input type="button" value="Submit">
+          <i class="fa-solid fa-trash-can-xmark" id="fa-trash-can-xmark" ></i>
+          <i class="fa-solid fa-circle-plus" id="fa-circle-plus"></i>
+        </fieldset>
+      </form>
+    </div>
+  
 
-
-
-
-
-     <!-- AUTO SITED -->
-     <!-- <div id="scrollbx">    
-        <h2>Auto Parts Sites</h2>
-        <div class="AfterMArketSites">   
-          <h3>Aftermarket</h3>
-        <div class="AfterMArketSites">   
-          <a href="https://www.rockauto.com/"><img src="https://static.wixstatic.com/media/08f70a_d96d6186e5544affb1e59be9ff2d3c63~mv2.jpg/v1/fill/w_640,h_384,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/08f70a_d96d6186e5544affb1e59be9ff2d3c63~mv2.jpg" alt=""></a>
-          <a href="https://www.autozone.com/"><img src="https://www.autozone.com/images/az-logo-full.svg" alt=""></a>
-          <a href="https://shop.advanceautoparts.com/"><img src="https://1000logos.net/wp-content/uploads/2023/04/Advance-Auto-Parts-logo.png" alt=""></a>
-          <a href="https://www.1aauto.com/"><img src="https://content.1aauto.com/img/icons/1alogo-w50-svg.svg" alt=""></a>
-          <a href="https://www.partsgeek.com/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPAIan2YS61VfbOz1vxyd7x45FX1xHGd4m3RnmK6ydKLGMtwCoZJ4SHIS5sGuaqupnH4&usqp=CAU" alt=""></a>
-          <a href="https://www.carid.com/"><img src="https://www.turbosmart.com/wp-content/uploads/2018/09/carid_owler_20190604_133127_original.png" alt=""></a>
-          <a href="https://www.ebay.com/b/Auto-Parts-and-Vehicles/6000/bn_1865334"><img src="https://www.ebayinc.com/assets/Uploads/PressRoom/Local/Imported/Embed/ebay_motor_0.jpg" alt=""></a>
-          <a href="https://www.buyautoparts.com/"><img src="https://www.buyautoparts.com/images/BAP_Logo.svg" alt=""></a>
-          <a href="https://www.americantrucks.com/"><img src="https://encrypted-https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbTaf8pkQSzPqG9iOclOWd_yyqAQvZzQS06Q&stbn0.gstatic.com/images?q=tbn:ANd9GcT9aluCYgOoS-Zb6vIXjbe2RrIiydYipJKDJg&s" alt=""></a>
-          <a href="https://www.carparts.com/"><img src="" alt=""></a>
+        <!-- Maintenance And Repairs  -->
+    <div class="MaintenanceAndRepairRecords">
+      <!-- <h3>Maintenance And Repairs</h3> -->
+        <!-- Form -->
+      <form action="" method="post">
+        <fieldset id="MaintenanceAndRepairRecords">
+        <legend>Maintenance And Repairs</legend>
+        <label for="">Date</label>
+      <input type="date" name="" value="" autofocus>
+          <br>
+      <label for="number">Mileage</label>
+      <input type="" name="" value="">
+          <br>
+      <label for="">Change/Replace</label>
+      <input type="text" name="" value="">
+          <br>
+      <label for="">Vehicle Location</label>
+      <input type="text" name="" value="">
+          <br>
+      <label for="">Service Provider</label>
+      <input type="text" name="" value="">
+          <br>
+      <label for="">Cost of Service</label>
+      <input type="number" name="" value="$" placeholder="$">
+          <br>
+      <label for="">Next Service Due</label>
+      <input type="month" name="" value="" >
+            <br>
+      <label for="">Receipt/Invoice Number</label>
+      <input type="text" name="" value="">
+            <br>
+      <label for="">Notes/Issues</label>
+      <textarea name="" id=""></textarea>
+      <br>
+      
+      <input type="button" value="Submit">
+      <i class="fa-solid fa-trash-can-xmark" id="fa-trash-can-xmark2"></i>
+      <i class="fa-solid fa-circle-plus" id="fa-circle-plus2"></i>
+    </fieldset>
+      </form>
          </div>
-        </div>
 
-        <div class="PerformanceSites">
-           <h3>Performance</h3>
-          <a href="https://www.summitracing.com/"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSI4OS43cHgiIGhlaWdodD0iNDBweCIgdmlld0JveD0iMTUyIDM3Ny4yIDg5LjcgNDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMTUyIDM3Ny4yIDg5LjcgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjMDAwMDk5IiBkPSJNMjM5LjQsMzg2LjVjLTAuMS0wLjEtMC4xLTAuMS0wLjItMC4xbC0yLjUsMGwxLjctOC4zYzAtMC4xLDAtMC4yLTAuMS0wLjJjLTAuMS0wLjEtMC4yLTAuMS0wLjMsMAoJbC0xMy41LDYuOGMtMC4xLDAtMC4xLDAuMS0wLjEsMC4ybC0wLjQsMS43bC01MS40LDBsNi4xLTljMC4xLTAuMSwwLjEtMC4yLDAtMC4yYy0wLjEtMC4xLTAuMS0wLjEtMC4yLTAuMWgtMTYuNAoJYy0wLjEsMC0wLjEsMC0wLjIsMC4xbC02LjYsOS4xYy0wLjcsMC45LTIuNSwzLjMtMi4yLDYuMmMwLjIsMi4zLDEuMywzLjksMS45LDQuNWwtMi45LDRjLTAuMSwwLjEtMC4xLDAuMSwwLDAuMmw1LjUsMTUuOAoJYzAsMC4xLDAuMSwwLjEsMC4yLDAuMmMwLjEsMCwwLjIsMCwwLjItMC4xbDkuMS0xMi40YzEuMiwxLjUsMy42LDMuNiw4LjEsMy41YzEuNCwwLDIuNi0wLjIsMy41LTAuNGMwLDAsMC4xLDAuMSwwLjIsMC4xbDUzLjMsMAoJYzAuMSwwLDAuMi0wLjEsMC4yLTAuMmwxLjktOS4xbDIuNSwwYzAuMSwwLDAuMi0wLjEsMC4yLTAuMmwyLjYtMTEuN0MyMzkuNSwzODYuNiwyMzkuNCwzODYuNiwyMzkuNCwzODYuNXoiLz4KPGc+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTY1LjYsNDEwLjhoMi40YzAuOSwwLDEuMywwLjUsMS4xLDEuMmMtMC4xLDAuNC0wLjQsMC44LTAuOSwxYzAuMSwwLjYsMC4xLDEuMSwwLjMsMS43aC0xLjZsLTAuMS0yLjIKCQljMC4xLDAsMC4yLDAsMC4zLDBjMC4zLDAsMC42LTAuMSwwLjctMC40YzAuMS0wLjMtMC4xLTAuMy0wLjQtMC4zaC0wLjVsLTAuNywyLjloLTEuNEwxNjUuNiw0MTAuOHoiLz4KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNzEuMyw0MTIuOGwwLjYtMC45aDBsMC4xLDAuOUgxNzEuM3ogTTE3MC4xLDQxNC43bDAuNi0wLjloMS40bDAuMSwwLjloMS42Yy0wLjMtMS4zLTAuNS0yLjYtMC43LTMuOQoJCWgtMS44Yy0wLjksMS4zLTEuOCwyLjYtMi44LDMuOUgxNzAuMXoiLz4KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNzcuMiw0MTQuN2MtMC40LDAtMC45LDAuMS0xLjEsMC4xYy0xLjIsMC0yLjMtMC42LTEuOS0yYzAuNC0xLjQsMS43LTIsMi45LTJjMC4zLDAsMC43LDAuMSwxLDAuMQoJCUwxNzgsNDEyYy0wLjMtMC4xLTAuNi0wLjEtMC45LTAuMWMtMC45LDAtMS4zLDAuNi0xLjQsMWMtMC4xLDAuNiwwLjIsMC45LDAuNywwLjljMC41LDAsMC45LTAuMSwxLjItMC4xTDE3Ny4yLDQxNC43eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE3OC45LDQxMC44aDEuNWwtMSwzLjloLTEuNUwxNzguOSw0MTAuOHoiLz4KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xODEuMiw0MTAuOGgxLjhsMC42LDIuMWgwbDAuNS0yLjFoMS4zbC0xLDMuOWgtMS44bC0wLjctMi4xaDBsLTAuNSwyLjFoLTEuM0wxODEuMiw0MTAuOHoiLz4KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xODkuOCw0MTIuNGwtMC42LDIuMmMtMC42LDAuMS0xLjUsMC4xLTEuOCwwLjFjLTEuMiwwLTIuMy0wLjYtMS45LTJjMC40LTEuNCwxLjctMiwyLjktMgoJCWMwLjUsMCwxLDAuMSwxLjQsMC4xbC0wLjIsMS4xYy0wLjQtMC4xLTAuOC0wLjItMS4yLTAuMmMtMC44LDAtMS4zLDAuNC0xLjUsMS4xYy0wLjEsMC42LDAuMSwwLjksMC42LDAuOWMwLjEsMCwwLjMsMCwwLjQsMAoJCWwwLjEtMC4zaC0wLjRsMC4zLTFMMTg5LjgsNDEyLjRMMTg5LjgsNDEyLjR6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTk1LjQsNDE0LjdIMTkybDEtMy45aDMuNGwtMC4zLDFoLTEuOWwtMC4xLDAuNGgxLjZsLTAuMywxaC0xLjZsLTAuMSwwLjRoMS45TDE5NS40LDQxNC43eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE5OS4xLDQxMS44YzAuNSwwLDAuOCwwLjQsMC43LDFjLTAuMSwwLjYtMC43LDAuOS0xLjEsMC45cy0wLjgtMC40LTAuNy0wLjkKCQlDMTk4LjEsNDEyLjIsMTk4LjYsNDExLjgsMTk5LjEsNDExLjh6IE0yMDAuNiw0MTMuN0wyMDAuNiw0MTMuN2MwLjMtMC4yLDAuNi0wLjcsMC42LTAuOWMwLjQtMS40LTAuNy0yLTEuOS0yCgkJYy0xLjIsMC0yLjYsMC42LTIuOSwyYy0wLjQsMS40LDAuNywyLDEuOSwyYzAuNCwwLDEuNy0wLjEsMi41LTAuMmwwLjQtMS4xTDIwMC42LDQxMy43eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIwMy44LDQxMC44bC0wLjUsMi4xYy0wLjEsMC40LTAuMSwwLjcsMC4zLDAuN2MwLjQsMCwwLjYtMC4zLDAuNy0wLjdsMC41LTIuMWgxLjVsLTAuNywyLjgKCQljLTAuMSwwLjYtMC45LDEuMi0yLjMsMS4yYy0xLjQsMC0xLjktMC42LTEuNy0xLjJsMC43LTIuOEgyMDMuOHoiLz4KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yMDcuMSw0MTAuOGgxLjVsLTEsMy45aC0xLjVMMjA3LjEsNDEwLjh6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjA5LjQsNDEwLjhoMi4zYzAuNSwwLDEuMSwwLjQsMC44LDEuM2MtMC4yLDAuNy0wLjksMS4yLTEuNywxLjJjLTAuMSwwLTAuMiwwLTAuMywwbC0wLjEtMC45aDAuMgoJCWMwLjIsMCwwLjQtMC4xLDAuNS0wLjNjMC4xLTAuMy0wLjEtMC4zLTAuMy0wLjNoLTAuM2wtMC43LDIuOWgtMS40TDIwOS40LDQxMC44eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIxMi4zLDQxNC43bDEtMy45aDJsLTAuMSwyLjFoMGwxLTIuMWgybC0xLDMuOWgtMS4ybDAuNi0yLjZoMGwtMS4yLDIuNmgtMS4zbDAuMS0yLjZoMGwtMC42LDIuNkgyMTIuM3oiCgkJLz4KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yMjEuMyw0MTQuN2gtMy40bDEtMy45aDMuNGwtMC4zLDFoLTEuOWwtMC4xLDAuNGgxLjZsLTAuMywxaC0xLjZsLTAuMSwwLjRoMS45TDIyMS4zLDQxNC43eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIyMy4xLDQxMC44aDEuOGwwLjYsMi4xaDBsMC41LTIuMWgxLjNsLTEsMy45aC0xLjdsLTAuNy0yLjFoMGwtMC41LDIuMWgtMS4zTDIyMy4xLDQxMC44eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIyNy43LDQxMC44aDMuOWwtMC4zLDFoLTEuMmwtMC43LDIuOGgtMS41bDAuNy0yLjhoLTEuMkwyMjcuNyw0MTAuOHoiLz4KPC9nPgo8Zz4KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yNDAuMywzODAuOGMtMC42LDAtMS4xLTAuNS0xLjEtMS4xYzAtMC42LDAuNS0xLjEsMS4xLTEuMWMwLjYsMCwxLjEsMC41LDEuMSwxLjEKCQlDMjQxLjQsMzgwLjMsMjQwLjksMzgwLjgsMjQwLjMsMzgwLjh6IE0yNDAuMywzODFjMC44LDAsMS40LTAuNiwxLjQtMS40YzAtMC44LTAuNi0xLjQtMS40LTEuNGMtMC44LDAtMS40LDAuNi0xLjQsMS40CgkJUzIzOS42LDM4MSwyNDAuMywzODF6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjQwLjYsMzc5LjhjMC4zLDAsMC40LTAuMSwwLjQtMC40YzAtMC4yLDAtMC4zLTAuMi0wLjRjLTAuMS0wLjEtMC4zLTAuMS0wLjQtMC4xaC0wLjd2MS40aDAuM3YtMC42aDAuMwoJCWwwLjMsMC42aDAuM0wyNDAuNiwzNzkuOHogTTI0MCwzNzkuNnYtMC40aDAuNGMwLjEsMCwwLjMsMCwwLjMsMC4yYzAsMC4yLTAuMSwwLjItMC4zLDAuMkgyNDB6Ii8+CjwvZz4KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIzNi4zLDM4OC4zYy0wLjEtMC4xLTAuMS0wLjEtMC4yLTAuMWwtMi41LDBsMS40LTYuNmMwLTAuMSwwLTAuMi0wLjEtMC4yYy0wLjEtMC4xLTAuMi0wLjEtMC4zLDBsLTguOSw0LjQKCWMtMC4xLDAtMC4xLDAuMS0wLjEsMC4ybC0wLjUsMi4zbC0xMy42LDBjLTAuMSwwLTAuMSwwLTAuMiwwLjFsLTEuNiwyLjJsLTAuNy0yLjJjMC0wLjEtMC4xLTAuMi0wLjItMC4ySDE5NWMtMC4xLDAtMC4xLDAtMC4yLDAuMQoJbC0xLjcsMi4zbC0wLjctMi4yYzAtMC4xLTAuMS0wLjItMC4yLTAuMmgtMjEuN2MtMC4xLDAtMC4yLDAuMS0wLjIsMC4ybC0wLjYsMi42Yy0wLjUtMC43LTEuMi0xLjYtMS41LTEuOWw3LjMtMTAuMgoJYzAuMS0wLjEsMC4xLTAuMiwwLTAuM2MwLTAuMS0wLjEtMC4xLTAuMi0wLjFoLTEyLjVjLTAuMSwwLTAuMSwwLTAuMiwwLjFjLTAuMSwwLjEtNiw4LjQtNi4xLDguNWMtMC42LDAuNy0yLDIuNy0xLjgsNC44CgljMC4yLDEuOSwxLjIsMy4xLDEuNSwzLjZsMC4yLDAuMmwwLjcsMC45bC0zLjIsNC4zYzAsMC4xLTAuMSwwLjEsMCwwLjJsNC4xLDEyLjFjMCwwLjEsMC4xLDAuMSwwLjIsMC4yYzAuMSwwLDAuMiwwLDAuMi0wLjEKCWw5LjItMTIuOWMwLDAuMSwwLDAuMywwLDAuNGMwLjEsMS43LDEuNyw0LjksNyw0LjljMy4xLDAsNS4xLTAuOSw2LjQtMS45bC0wLjMsMS4zYzAsMC4xLDAsMC4xLDAsMC4yYzAsMC4xLDAuMSwwLjEsMC4yLDAuMWw0OSwwCgljMC4xLDAsMC4yLTAuMSwwLjItMC4ybDEuOS05LjFsMi41LDBjMC4xLDAsMC4yLTAuMSwwLjItMC4ybDEuNy03LjVDMjM2LjQsMzg4LjQsMjM2LjQsMzg4LjQsMjM2LjMsMzg4LjN6Ii8+CjxnPgoJPHBhdGggZmlsbD0iI0ZGMDAwMCIgZD0iTTE4My43LDM4OS45YzAtMC4xLTAuMS0wLjEtMC4yLTAuMWgtNC41Yy0wLjEsMC0wLjIsMC4xLTAuMiwwLjJsLTIsOS4zYzAsMC4xLTAuMywxLjMtMS40LDEuMwoJCWMtMC4zLDAtMC41LTAuMS0wLjYtMC4zYy0wLjItMC4zLTAuMS0wLjgtMC4xLTAuOWMwLDAsMi4xLTkuMywyLjEtOS4zYzAtMC4xLDAtMC4xLTAuMS0wLjJjMC0wLjEtMC4xLTAuMS0wLjItMC4xaC00LjUKCQljLTAuMSwwLTAuMiwwLjEtMC4yLDAuMmwtMi40LDEwLjdjMCwwLDAsMCwwLDAuMWMwLDAsMC4zLDMuMyw1LjMsMy4zYzUuNiwwLDYuOC0zLjIsNi44LTMuM2wyLjQtMTAuNwoJCUMxODMuNywzOTAuMSwxODMuNywzOTAsMTgzLjcsMzg5Ljl6Ii8+Cgk8cGF0aCBmaWxsPSIjRkYwMDAwIiBkPSJNMjI0LDM5MC4xYzAtMC4xLTAuMS0wLjEtMC4yLTAuMWgtNC41Yy0wLjEsMC0wLjIsMC4xLTAuMiwwLjJsLTIuOSwxMy4zYzAsMC4xLDAsMC4xLDAuMSwwLjIKCQljMCwwLjEsMC4xLDAuMSwwLjIsMC4xaDQuNWMwLjEsMCwwLjItMC4xLDAuMi0wLjJsMi45LTEzLjNDMjI0LDM5MC4yLDIyNCwzOTAuMiwyMjQsMzkwLjF6Ii8+Cgk8cGF0aCBmaWxsPSIjRkYwMDAwIiBkPSJNMjAwLjYsMzkwLjFjMC0wLjEtMC4xLTAuMS0wLjItMC4xaC00LjVjLTAuMSwwLTAuMSwwLTAuMiwwLjFsLTMuMiw0LjNsLTEuMy00LjFjMC0wLjEtMC4xLTAuMi0wLjItMC4yCgkJaC00LjhjLTAuMSwwLTAuMiwwLjEtMC4yLDAuMmwtMy4yLDEzLjNjMCwwLjEsMCwwLjEsMCwwLjJjMCwwLjEsMC4xLDAuMSwwLjIsMC4xaDQuNmMwLjEsMCwwLjItMC4xLDAuMi0wLjJsMS43LTYuNGwxLjMsMy42CgkJYzAsMC4xLDAuMSwwLjEsMC4yLDAuMmMwLjEsMCwwLjIsMCwwLjItMC4xbDIuOC0zLjZsLTEuMyw2LjFjMCwwLjEsMCwwLjEsMC4xLDAuMmMwLDAuMSwwLjEsMC4xLDAuMiwwLjFoNC4zCgkJYzAuMSwwLDAuMi0wLjEsMC4yLTAuMmwzLjItMTMuNEMyMDAuNiwzOTAuMiwyMDAuNiwzOTAuMSwyMDAuNiwzOTAuMXoiLz4KCTxwYXRoIGZpbGw9IiNGRjAwMDAiIGQ9Ik0yMTcuMiwzOTAuMWMwLTAuMS0wLjEtMC4xLTAuMi0wLjFoLTQuNWMtMC4xLDAtMC4xLDAtMC4yLDAuMWwtMy4yLDQuM2wtMS4zLTQuMWMwLTAuMS0wLjEtMC4yLTAuMi0wLjIKCQloLTQuOGMtMC4xLDAtMC4yLDAuMS0wLjIsMC4ybC0zLjIsMTMuM2MwLDAuMSwwLDAuMSwwLDAuMmMwLDAuMSwwLjEsMC4xLDAuMiwwLjFoNC42YzAuMSwwLDAuMi0wLjEsMC4yLTAuMmwxLjctNi40bDEuMywzLjYKCQljMCwwLjEsMC4xLDAuMSwwLjIsMC4yYzAuMSwwLDAuMiwwLDAuMi0wLjFsMi44LTMuNmwtMS4zLDYuMWMwLDAuMSwwLDAuMSwwLjEsMC4yYzAsMC4xLDAuMSwwLjEsMC4yLDAuMWg0LjMKCQljMC4xLDAsMC4yLTAuMSwwLjItMC4ybDMuMi0xMy40QzIxNy4yLDM5MC4yLDIxNy4yLDM5MC4xLDIxNy4yLDM5MC4xeiIvPgoJPHBhdGggZmlsbD0iI0ZGMDAwMCIgZD0iTTE2Ny45LDM5MS42bC0xLjktMi40bDYuMS04LjVjMC4xLTAuMSwwLjEtMC4yLDAtMC4zYzAtMC4xLTAuMS0wLjEtMC4yLTAuMWgtOC4zYy0wLjEsMC0wLjEsMC0wLjIsMC4xCgkJbC01LjUsNy43YzAsMC0wLjEsMC4xLTAuMSwwLjFjLTAuNCwwLjYtMS42LDIuMS0xLjUsMy42YzAuMSwxLjQsMC45LDIuMywxLjIsMi43YzAsMC4xLDAuMSwwLjEsMC4xLDAuMWMwLjcsMC45LDEuMywxLjcsMS42LDIKCQlsLTMuNCw0LjdjMCwwLjEtMC4xLDAuMSwwLDAuMmwyLjcsOC4xYzAsMC4xLDAuMSwwLjEsMC4yLDAuMmMwLjEsMCwwLjIsMCwwLjItMC4xbDguNS0xMS43bDAuMS0wLjFjMC40LTAuNSwxLjUtMi4xLDEuNS0zLjYKCQljMC0xLjQtMC43LTIuMi0wLjktMi41QzE2OCwzOTEuNywxNjcuOSwzOTEuNywxNjcuOSwzOTEuNnoiLz4KCTxwYXRoIGZpbGw9IiNGRjAwMDAiIGQ9Ik0yMzQuMiwzOTBjLTAuMS0wLjEtMC4xLTAuMS0wLjItMC4xbC0yLjQsMGwxLjEtNS4yYzAtMC4xLDAtMC4yLTAuMS0wLjJjLTAuMS0wLjEtMC4yLTAuMS0wLjMsMGwtNSwyLjUKCQljLTAuMSwwLTAuMSwwLjEtMC4xLDAuMmwtMC42LDIuOWgtMWMtMC4xLDAtMC4yLDAuMS0wLjIsMC4ybC0wLjksNGMwLDAuMSwwLDAuMSwwLjEsMC4yYzAsMC4xLDAuMSwwLjEsMC4yLDAuMWgwLjlsLTEuOSw5CgkJYzAsMC4xLDAsMC4xLDAuMSwwLjJjMCwwLjEsMC4xLDAuMSwwLjIsMC4xaDQuNmMwLjEsMCwwLjItMC4xLDAuMi0wLjJsMS45LTkuMWwyLjUsMGMwLjEsMCwwLjItMC4xLDAuMi0wLjJsMC45LTQuMQoJCUMyMzQuMywzOTAuMSwyMzQuMywzOTAuMSwyMzQuMiwzOTB6Ii8+CjwvZz4KPC9zdmc+Cg==" alt=""></a>
-          <a href="https://www.jegs.com/"><img src="https://www.jegs.com/images/icons/jegs-logo-2023.svg" alt=""></a>
-          <a href="https://www.americanmuscle.com/"><img src="https://ih1.redbubble.net/image.3991137150.6248/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt=""></a>
-          <a href="https://stillen.com/"><img src="https://i0.wp.com/drewsdecals.com/wp-content/uploads/2019/09/stillen-red-mockup-2.jpg?fit=1200%2C800&ssl=1" alt=""></a>
-          <a href="https://www.vividracing.com/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4_mgHf6Ih47ZndPWwW2DIh5SAtCJgpYGjew&s" alt=""></a>
-          <a href="https://www.hoonigan.com/"><img src="https://www.hoonigan.com/wp-content/uploads/2023/10/hngn_logo.svg" alt=""></a>
-          <a href="https://www.fcpeuro.com/"><img src="https://info.fcpeuro.com/hubfs/MotorsportLP_Assets/FCP-Euro-Logo-Full-white.png" alt=""></a>
-         <a href="https://www.cjponyparts.com/?srsltid=AfmBOoosKJ3MUZITD7T9nPPkuRrcJ6CovDQYjuRvB_3QTopISTD7uP2o"><img src="https://www.cjponyparts.com/static/version1724843120/frontend/Cjponyparts/default/en_US/images/cjponyparts-mustang-logo.png" alt=""></a>
-        </div>
 
-        <div class="tireSites">
-          <h3>Tires</h3>
-          <a href="https://www.tirerack.com/content/tirerack/desktop/en/homepage.html"><img src="https://www.tirerack.com/content/dam/tirerack/logos/TireRack.png" alt=""></a>
-          <a href="https://www.discounttire.com/"><img src="https://cdn.discounttire.com/sys-master/images/hc5/h31/8808331083806/DT_logo.svg" alt=""></a>
-          <a href="https://simpletire.com/"><img src="https://s19538.pcdn.co/wp-content/uploads/2019/08/SimpleTireLogo.jpg" alt=""></a>
-          <a href="https://www.goodyear.com/"><img src="https://www.goodyear.com/on/demandware.static/Sites-Goodyear-Site/-/default/dw41ce1091/images/logo-small-yellow.svg" alt=""></a>
-          <a href="https://www.prioritytire.com/"><img src="https://www.prioritytire.com/media/logo/stores/1/Priority-Tire-Logo_1.png" alt=""></a>
-          <a href="https://www.tirebuyer.com/"><img src="https://www.tractionnews.com/wp-content/uploads/2021/03/Tire-Header-2.png" alt=""></a>
-          <a href="https://www.amazon.com/Automotive-Tires-Wheels/b?ie=UTF8&node=15706571"><img src="https://static.vecteezy.com/system/resources/previews/019/766/240/non_2x/amazon-logo-amazon-icon-transparent-free-png.png" alt=""></a>
-          <a href="https://www.walmart.com/cp/tires-accessories/1077064"><img src="https://assets.simon.com/tenantlogos/13415.png" alt=""></a>
-          <a href="https://m.costco.com/auto-tires.html"><img src="https://1000logos.net/wp-content/uploads/2017/08/Costco-Emblem.jpg" alt=""></a>
-          <a href=""><img src="https://www.r2cthemes.com/bjstire/i/logo-red.webp" alt=""></a>
-        </div>
-     </div> -->
-
-     <div class="DashLightInfo">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-
-     </div>
-   
+         <!-- Fuel Records -->
+    <div class="FuelRecord">
+      <!-- <h3>Fuel Record</h3> -->
+        <!-- Form -->
+      <form action="" method="post">
+        <fieldset id="FuelRecord">
+          <legend>Fuel Record</legend>
+          <label for="">Date</label>
+          <input type="date" name="" value="" autofocus>
+            <br>
+          <label for="">Gallon/Liter Purchased</label>
+          <input type="number" name="" value="">
+            <br>
+          <label for="">Price Per Gallon/Liter</label>
+          <input type="" name="" value="$" placeholder="$">
+            <br>
+          <label for="">Total Cost</label>
+          <input type="" name="" value="$" placeholder="$">
+            <br>
+          <label for="">Fuel Type</label>
+          <select name="fuelType" id="fuelType">
+            <option value=""></option>
+            <option value="Regular">Regular</option>
+            <option value="Premium">Premium</option>
+            <option value="Diseal">Diseal</option>
+          </select>
+            <br>
+          <label for="">Gas Station Name</label>
+          <input type="" name="" value="">
+            <br>
+          <label for="">Gas Station Location</label>
+          <input type="" name="" value="">
+            <br>  
+          <label for="">Payment Method</label>
+          <select name="paymentMethod" id="paymentMethod">
+            <option value=""></option>
+            <option value="CreditCard">Credit</option>
+            <option value="DebitCard">Debit</option>
+            <option value="Cash">Cash</option>
+          </select>
+          <input type="" name="" value="">
+            <br>
+          <label for="">Odometer Reading</label>
+          <input type="" name="" value="">
+              <br>
+          <label for="">Trip Purpose</label>
+          <input type="" name="" value="">
+              <br>
+          <label for="">Fuel Efficiency</label>
+          <input type="" name="" value="" readonly>
+          <br>
+          
+          <input type="button" value="Submit">
+          <i class="fa-solid fa-trash-can-xmark" id="fa-trash-can-xmark"></i>
+          <i class="fa-solid fa-circle-plus"></i>
+        </fieldset>
+      </form>
+    </div>
     
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-      
-    <script type="module" src="ManLog.js"></script>
-
-       <!-- prettier-ignore -->
-  <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-    ({key: "AIzaSyB08dmlY-CEs58aLMsylEixteo6HgIgcDE", v: "weekly"});
-    
-    
-
-    // CAR DETAIL API
-    async function fetchCarData() {
-      const url = new URL('https://api.api-ninjas.com/v1/cars');
-      
-      // Collecting input from the form
-      const make = document.getElementById('make').value;
-      const model = document.getElementById('model').value;
-      const year = document.getElementById('year').value;
-  
-      // Append parameters to the URL if they are not empty
-      if (make) url.searchParams.append('make', make);
-      if (model) url.searchParams.append('model', model);
-      if (year) url.searchParams.append('year', year);
-  
-      try {
-          const response = await fetch(url, {
-              method: 'GET',
-              headers: {
-                  'X-Api-Key': 'sExy1uExgTEUIXGunZIidg==62LTiAFkcZNsZwrg'
-              }
-          });
-  
-          if (!response.ok) {
-              throw new Error('Network response was not ok. Status: ' + response.status);
-          }
-  
-          const cars = await response.json();
-          displayCars(cars);
-      } catch (error) {
-          console.error('There was a problem with the fetch operation:', error);
-      }
-  }
-  
-  function displayCars(cars) {
-      const container = document.getElementById('carsContainer');
-      container.innerHTML = ''; // Clear previous contents
-  
-      cars.forEach(car => {
-          const carDiv = document.createElement('div');
-    
-          carDiv.innerHTML = `
-              <h2>${car.make} ${car.model} ${car.year}</h2>
-  
-              <div id="detail">Details:</div>
-              <div id="bold">Drive: ${JSON.stringify(car.drive)}</div>
-              <div  id="bold">Class: ${JSON.stringify(car.class)}</div>
-              <div  id="bold">Fuel Type: ${JSON.stringify(car.fuel_type)}</div>
-              <div  id="bold">Transmission: ${JSON.stringify(car.transmission)}</div>
-              <div  id="bold">Cylinders: ${JSON.stringify(car.cylinders)}</div>
-               <div  id="bold">City MPG: ${JSON.stringify(car.city_mpg)}</div>
-                <div  id="bold">Highway MPG: ${JSON.stringify(car.highway_mpg)}</div>
-              <div  id="bold">Combination MPG: ${JSON.stringify(car.combination_mpg)}</div>
-              <div  id="bold">Displacement: ${JSON.stringify(car.displacement)}</div>
-              
-              
-          `;
-          container.appendChild(carDiv);
-      });
-  }
-
-  const submitbtn = document.getElementById('btn-details');
-
-  submitbtn.addEventListener('click', () =>{
-  
-    setTimeout(() => {
-        const detailInfo = document.getElementById('carsContainer');
-    detailInfo.style.display = 'block';
-    }, -2000);
-  })
-
-</script>
+              <!-- Vehicle Registration Records -->
+      <div class="VehicleRegistration">
+                <!-- Form -->
+        <form>
+          <fieldset id="VehicleRegistration">
+            <legend>Vehicle Registration</legend>
+            <label for="">Registration renewal date</label>
+            <input type="text">
+              <br>
+            <label for="">Fees and Taxes Paid</label>
+            <input type="text">
+            <br>
+            <label for="">Copies of Registration Documents</label>
+            <input type="text">
+            <br>
+            
+            <input type="button" value="Submit">
+            <i class="fa-solid fa-trash-can-xmark" id="fa-trash-can-xmark"></i>
+            <i class="fa-solid fa-circle-plus"></i>
+           </fieldset>
+        </form>
+      </div>
 
 
-    </body>
+          <!-- Insurance Records -->
+      <div class="InsuranceRecords">
+                <!-- Form -->
+        <form action="">
+          <fieldset id="InsuranceRecords">
+            <legend>Insurance</legend>
+
+            <label for="">Policy Number</label>
+            <input type="number">
+            <br>
+            <label for="">Provider</label>
+            <input type="text" value="" placeholder="Name">
+            <br>
+            <label for="">Coverage Details</label>
+            <input type="text">
+            <br>
+            <label for="">Premium Payments</label>
+            <input type="date">
+            <input type="text" name="" value="$">
+            <br>
+            <label for="">Claim Records</label>
+            <input type="text">
+            <br>
+            
+            <input type="button" value="Submit">
+            <i class="fa-solid fa-trash-can-xmark" id="fa-trash-can-xmark"></i>
+            <i class="fa-solid fa-circle-plus"></i>
+          </fieldset>
+        </form>
+      </div>
+
+
+            <!-- Accident Records -->
+      <div class="AccidentRecords">
+                <!-- Form -->
+        <form action="" method="post">
+          <fieldset id="AccidentRecords">
+            <legend>Accident Records</legend>
+
+            <label for="">Date</label>
+            <input type="date">
+            <br>
+            <label for="">Repair Documents</label>
+            <input type="text">
+            <br>
+            <label for="">Insurance Claims Filled</label>
+            <input type="text">
+            <br>  
+            <label for="">Police Reports</label>
+            <input type="text">
+            <br>
+            
+            <input type="button" value="Submit">
+            <i class="fa-solid fa-trash-can-xmark" id="fa-trash-can-xmark"></i>
+            <i class="fa-solid fa-circle-plus"></i>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="AddOrDelete" id="AddOrDeleteContainer">
+
+
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+      <!-- Tax Dependents Records -->    
+    <!-- <span id="TaxDependent"> 
+      <h1>Tax Dependent Records</h1>
+
+    <details id="TaxDependentOptions">
+      <summary>What are you going Loging Today?</summary>
+      <li id="ProofOfRelationship">Proof of Relationship</li>
+      <li id="ProofOfIdentity">Proof of Identity</li>
+      <li id="ProofOfResidency">Proof of Residency (For Children)</li>
+      <li id="ProofOfFinancialRecords">Proof of Financial Support (For Relatives or Elder Dependents)</li>
+      <li id="ChildCareExpenses">Child Care Expenses</li>
+      <li id="MedicalExpenses">Medical Expenses</li>
+      <li id="EducationExpenses">Education Expenses</li>
+      <li id="AlimonyAndChildSupport">Alimony and Child Support</li>
+      <li id="LegalDocuments">Legal Document (If applicable)</li>
+      <li id="SupportProvidedDependts">Support Provided for Dependent (For non-children Dependents)</li>
+     </details>
+    </span> -->
+<!-- 
+  <div class="TaxDependentForm" id="TaxDependentForm">
+
+    <div>
+      <form action="" class="ProofOfRelationshipForm" id="ProofOfRelationshipForm">
+        <fieldset id="ProofOfRelationshipField">
+          <legend>Proof of Relationship</legend>
+          <label for="">Birth Certificates</label>
+          <input type="text">
+
+          <label for="">Adoption Papers or Decree</label>
+          <input type="text">
+
+          <label for="">Marriage Certificates (if stepchild)</label>
+          <input type="text">
+
+          <label for="">Court Order or Legal Guardianship Documents</label>
+          <input type="text">
+
+          <label for="">School or Medical Records</label>
+          <input type="text">
+
+          <label for="">Social Secuirty Cards for Dependents</label>
+          <input type="text">
+
+          <label for="">Birth Certificates</label>
+          <input type="text">
+
+          <label for="">Birth Certificates</label>
+          <input type="text">
+
+          
+        </fieldset>
+      </form>
+
+
+
+      <div>  
+      <form action="" method="post" class="ProofOfIdentityForm" id="ProofOfIdentityForm">
+        <fieldset id="ProofOfIdentityField">
+          <legend>Proof of Identity</legend>
+
+          <label for="">SSN</label>
+          <input type="text">
+
+          <label for="">Birth Certificates</label>
+          <input type="text">
+
+          <label for="">ITIN (No SSN)</label>
+          <input type="text">
+
+          <label for="">Passport or Government-Issued Identification</label>
+          <input type="text">
+        </fieldset>
+      </form>
+    </div>
+
+
+
+    <div>
+      <form action="" class="ProofOfResidencyForm" id="ProofOfResidencyForm">
+        <fieldset id="ProofOfResidencyField">
+          <legend>Proof of Residency (For Children)</legend>
+          <label for="">School Records or Report Cards</label>
+          <input type="text">
+
+          <label for="">Medical Records or Doctor's Statements</label>
+          <input type="text">
+
+          <label for="">Lease Agreement or Utility Bills</label>
+          <input type="text">
+
+          <label for="">Daycare Records</label>
+          <input type="text" name="" id="">
+        </fieldset>
+      </form>
+    </div>
+
+
+    <div>
+      <form class="ProofOfFinancialRecordsForm" id="ProofOfFinancialRecordsForm">
+        <fieldset id="ProofOfFinancialRecordsField">
+          <legend>Proof of Financial Support (For Relatives or Elder Dependents)</legend>
+
+          <label for="">Bank Statements or Financial Records</label>
+          <input type="text" name="" id="">
+
+          <label for="">Receipts for Household Expenses</label>
+          <input type="text" name="" id="">
+        </fieldset>
+      </form>
+    </div>
+
+
+    <div>
+      <form action="" class="ChildCareExpensesForm" id="ChildCareExpensesForm">
+        <fieldset id="ChildCareExpensesField">
+          <legend>Child Care Expenses</legend>
+          <label for="">Receipts for Child Care Expenses</label>
+          <input type="text">
+
+          <label for="">Tax ID or SSN</label>
+          <input type="text">
+        </fieldset>
+      </form>
+    </div>
+
+    <div>
+      <form action="" class="MedicalExpensesForm" id="MedicalExpensesForm">
+        <fieldset id="MedicalExpensesField">
+          <legend>Medical Expenses</legend>
+          <label for="">Medical Bills and Receipts</label>
+          <input type="text">
+
+          <label for="">Health Insurance Records</label>
+          <input type="text">
+
+
+        </fieldset>
+      </form>
+    </div>
+
+
+    <div>
+      <form action="" class="EducationExpensesForm" id="EducationExpensesForm">
+        <fieldset id="EducationExpensesField">
+          <legend>Education Expenses</legend>
+          <label for="">Tuition Statements (Form 1098-T)</label>
+          <input type="text">
+
+          <label for="">Receipts for Books, supplies, and equipment</label>
+          <input type="text">
+
+          <label for="">Student Loan interest Statements </label>
+
+        </fieldset>
+      </form>
+    </div>
+
+
+
+    <div>
+      <form action="" class="AlimonyAndChildSupportForm" id="AlimonyAndChildSupportForm">
+        <fieldset id="AlimonyAndChildSupportField">
+        <legend>Alimony and Child Support</legend>
+
+        <label for="">Alimony or Child support agreements</label>
+        <input type="text" name="" id="">
+
+        <label for="">Proof of payments</label>
+        <input type="text" name="" id="">
+      </fieldset>
+      </form>
+    </div>
+
+
+
+      <div>
+        <form action="" class="LegalDocumentsForm" id="LegalDocumentsForm">
+          <fieldset id="LegalDocumentsField">
+            <legend>Legal Document (If applicable)</legend>
+
+            <label for="">Divorce decrees or separation agreements</label>
+            <input type="text" name="" id="">
+
+            <label for="">Form 8332 (Release/Revocation of Claim to Exemption)</label>
+          </fieldset>
+        </form>
+      </div>
+
+      <div>
+        <form action="" class="SupportProvidedDependtsForm" id="SupportProvidedDependtsForm">
+          <fieldset id="SupportProvidedDependtsField">
+            <legend>Support Provided for Dependent (For non-children Dependents)</legend>
+            
+            <label for="">Proof of Support</label>
+            <input type="text">
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <div id="AddOrDeleteBox">
+
+    </div>
+  </div>
+
+  
+  <div id="AddOrDeleteBox">
+
+  </div> -->
+
+
+
+
+  
+      <!-- <span id="Vehicle"> 
+        <h1>Tax Dependent</h1>
+      <details id="test">
+        <summary>What are you going Loging Today?</summary>
+        <li id="VehicleInfor">Vehicle Information</li>
+        <li id="VehicleMan">Maintenance & Repairs</li>
+        <li id="VehicleFuel">Vehicle Fuel Log</li>
+        <li id="VehicleRegis">Vehicle Registration</li>
+        <li id="VehicleInsur">Vehicle Insurance</li>
+        <li id="VehicleAcci">Vehicle Accident Log</li>
+       </details>
+      </span> -->
+
+<!--       
+      <form action="">
+        <fieldset>
+          <legend></legend>
+          <label for=""></label>
+          <input type="text">
+        </fieldset>
+      </form>
+    </div>
+
+
+
+  <div>
+    <div>
+      <form action="">
+        <fieldset>
+          <legend></legend>
+          <label for=""></label>
+          <input type="text">
+        </fieldset>
+      </form>
+    </div>
+
+    <div>
+      <form action="">
+        <fieldset>
+          <legend></legend>
+          <label for=""></label>
+          <input type="text">
+        </fieldset>
+      </form>
+    </div>
+
+    <div>
+      <form action="">
+        <fieldset>
+          <legend></legend>
+          <label for=""></label>
+          <input type="text">
+        </fieldset>
+      </form>
+    </div>
+
+    <div>
+      <form action="">
+        <fieldset>
+          <legend></legend>
+          <label for=""></label>
+          <input type="text">
+        </fieldset>
+      </form>
+    </div>
+
+    <div>
+      <form action="">
+        <fieldset>
+          <legend></legend>
+          <label for=""></label>
+          <input type="text">
+        </fieldset>
+      </form>
+    </div>
+  </div> -->
+ 
+
+  
+
+
+  <script src="in.js"></script>
+
+</body>
 </html>

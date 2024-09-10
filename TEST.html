@@ -5,16 +5,610 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
   <link rel="stylesheet" href="TEST.css">
+
+  <script src="https://kit.fontawesome.com/2b46095725.js" crossorigin="anonymous"></script>
+
   <title>Document</title>
 </head>
 <body>
+<!-- 
+  <i class="fa-solid fa-file"></i>
+  <i class="fa-duotone fa-solid fa-briefcase-blank"></i>
+  <i class="fa-sharp-duotone fa-solid fa-business-time"></i>
 
-  <style>
-    iframe{
-      border: 2px solid red;
-    }
-  </style>
+  <i class="fa-solid fa-file"></i>
+  <i class="fa-duotone fa-solid fa-user-plus"></i> -->
 
-<iframe width="640" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTrWNDsMkcwXNCEtnKfNFxP478s9bU2GQImDlJGnz65HTRZF4p1pm5Qyh_CpZdPkmDVy47PRlB9AX6f/pubchart?oid=1560258985&amp;format=interactive"></iframe>
+
+        <!-- NAV BAR -->
+  <nav>
+    <div>  <a href=""><i class="fa-solid fa-user"></i></a></div>
+    <div> <a href="">Profile</a></div>
+    <div id="menuOption">
+        <i class="fa-solid fa-arrow-up" id="fa-arrow-up"></i>
+        <i class="fa-solid fa-bars" id="fa-bars"></i>
+
+      <a href="" id="plus">
+        <div id="more">    
+        <div id="MoreMenu">
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+        </div>
+      </div> 
+       </a>
+
+    </div>
+    <div>  <a href="">Profile</a></div>
+    <div><a href="">Profile</a></div>
+  </nav>
+
+
+  <h1>Record Suite</h1>
+
+  
+      <!-- Vehicle Owner Records -->
+  <div class="VehicleOwnersRecordBody" id="VehicleOwnersRecordBody"> 
+    <!-- Drop Down List -->
+    <span id="Vehicle"> 
+      <h1>Vehicle Owner Records</h1>
+    <details id="test">
+      <summary>What are you going Log Today?</summary>
+      <li id="VehicleInfor">Vehicle Information</li>
+      <li id="VehicleMan">Maintenance & Repairs</li>
+      <li id="VehicleFuel">Vehicle Fuel Log</li>
+      <li id="VehicleRegis">Vehicle Registration</li>
+      <li id="VehicleInsur">Vehicle Insurance</li>
+      <li id="VehicleAcci">Vehicle Accident Log</li>
+     </details>
+    </span>
+ 
+  
+            <!-- Vehicle Information -->
+    <div class="VehicleInformation" >  
+      <!-- <h3>Vehicle Information</h3> -->
+               <!-- Form -->
+      <form action="" method="post">
+        <fieldset id="VehicleInformation">
+          <legend>Vehicle Information</legend>
+          <label for="">VIN</label>
+          <input type="number" id="" name="" autofocus>
+          <br>
+          <label for="">Make</label>
+          <input type="text" name="" id="">
+          <br>
+          <label for="">Model</label>
+          <input type="text" name="" id="">
+          <br>
+          <label for="">Year</label>
+          <input type="number" name="" id="">
+          <br>
+          <label for="">Insurance Policy Details</label>
+          <input type="text" name="" id="">
+          <br>
+          
+          <input type="button" value="Submit">
+          <i class="fa-solid fa-trash-can-xmark" id="fa-trash-can-xmark" ></i>
+          <i class="fa-solid fa-circle-plus" id="fa-circle-plus"></i>
+        </fieldset>
+      </form>
+    </div>
+  
+
+        <!-- Maintenance And Repairs  -->
+    <div class="MaintenanceAndRepairRecords">
+      <!-- <h3>Maintenance And Repairs</h3> -->
+        <!-- Form -->
+      <form action="" method="post">
+        <fieldset id="MaintenanceAndRepairRecords">
+        <legend>Maintenance And Repairs</legend>
+        <label for="">Date</label>
+      <input type="date" name="" value="" autofocus>
+          <br>
+      <label for="number">Mileage</label>
+      <input type="" name="" value="">
+          <br>
+      <label for="">Change/Replace</label>
+      <input type="text" name="" value="">
+          <br>
+      <label for="">Vehicle Location</label>
+      <input type="text" name="" value="">
+          <br>
+      <label for="">Service Provider</label>
+      <input type="text" name="" value="">
+          <br>
+      <label for="">Cost of Service</label>
+      <input type="number" name="" value="$" placeholder="$">
+          <br>
+      <label for="">Next Service Due</label>
+      <input type="month" name="" value="" >
+            <br>
+      <label for="">Receipt/Invoice Number</label>
+      <input type="text" name="" value="">
+            <br>
+      <label for="">Notes/Issues</label>
+      <textarea name="" id=""></textarea>
+      <br>
+      
+      <input type="button" value="Submit">
+      <i class="fa-solid fa-trash-can-xmark" id="fa-trash-can-xmark"></i>
+      <i class="fa-solid fa-circle-plus"></i>
+    </fieldset>
+      </form>
+         </div>
+
+
+         <!-- Fuel Records -->
+    <div class="FuelRecord">
+      <!-- <h3>Fuel Record</h3> -->
+        <!-- Form -->
+      <form action="" method="post">
+        <fieldset id="FuelRecord">
+          <legend>Fuel Record</legend>
+          <label for="">Date</label>
+          <input type="date" name="" value="" autofocus>
+            <br>
+          <label for="">Gallon/Liter Purchased</label>
+          <input type="number" name="" value="">
+            <br>
+          <label for="">Price Per Gallon/Liter</label>
+          <input type="" name="" value="$" placeholder="$">
+            <br>
+          <label for="">Total Cost</label>
+          <input type="" name="" value="$" placeholder="$">
+            <br>
+          <label for="">Fuel Type</label>
+          <select name="fuelType" id="fuelType">
+            <option value=""></option>
+            <option value="Regular">Regular</option>
+            <option value="Premium">Premium</option>
+            <option value="Diseal">Diseal</option>
+          </select>
+            <br>
+          <label for="">Gas Station Name</label>
+          <input type="" name="" value="">
+            <br>
+          <label for="">Gas Station Location</label>
+          <input type="" name="" value="">
+            <br>  
+          <label for="">Payment Method</label>
+          <select name="paymentMethod" id="paymentMethod">
+            <option value=""></option>
+            <option value="CreditCard">Credit</option>
+            <option value="DebitCard">Debit</option>
+            <option value="Cash">Cash</option>
+          </select>
+          <input type="" name="" value="">
+            <br>
+          <label for="">Odometer Reading</label>
+          <input type="" name="" value="">
+              <br>
+          <label for="">Trip Purpose</label>
+          <input type="" name="" value="">
+              <br>
+          <label for="">Fuel Efficiency</label>
+          <input type="" name="" value="" readonly>
+          <br>
+          
+          <input type="button" value="Submit">
+          <i class="fa-solid fa-trash-can-xmark" id="fa-trash-can-xmark"></i>
+          <i class="fa-solid fa-circle-plus"></i>
+        </fieldset>
+      </form>
+    </div>
+    
+
+              <!-- Vehicle Registration Records -->
+      <div class="VehicleRegistration">
+                <!-- Form -->
+        <form>
+          <fieldset id="VehicleRegistration">
+            <legend>Vehicle Registration</legend>
+            <label for="">Registration renewal date</label>
+            <input type="text">
+              <br>
+            <label for="">Fees and Taxes Paid</label>
+            <input type="text">
+            <br>
+            <label for="">Copies of Registration Documents</label>
+            <input type="text">
+            <br>
+            
+            <input type="button" value="Submit">
+            <i class="fa-solid fa-trash-can-xmark" id="fa-trash-can-xmark"></i>
+            <i class="fa-solid fa-circle-plus"></i>
+           </fieldset>
+        </form>
+      </div>
+
+
+          <!-- Insurance Records -->
+      <div class="InsuranceRecords">
+                <!-- Form -->
+        <form action="">
+          <fieldset id="InsuranceRecords">
+            <legend>Insurance</legend>
+
+            <label for="">Policy Number</label>
+            <input type="number">
+            <br>
+            <label for="">Provider</label>
+            <input type="text" value="" placeholder="Name">
+            <br>
+            <label for="">Coverage Details</label>
+            <input type="text">
+            <br>
+            <label for="">Premium Payments</label>
+            <input type="date">
+            <input type="text" name="" value="$">
+            <br>
+            <label for="">Claim Records</label>
+            <input type="text">
+            <br>
+            
+            <input type="button" value="Submit">
+            <i class="fa-solid fa-trash-can-xmark" id="fa-trash-can-xmark"></i>
+            <i class="fa-solid fa-circle-plus"></i>
+          </fieldset>
+        </form>
+      </div>
+
+
+            <!-- Accident Records -->
+      <div class="AccidentRecords">
+                <!-- Form -->
+        <form action="" method="post">
+          <fieldset id="AccidentRecords">
+            <legend>Accident Records</legend>
+
+            <label for="">Date</label>
+            <input type="date">
+            <br>
+            <label for="">Repair Documents</label>
+            <input type="text">
+            <br>
+            <label for="">Insurance Claims Filled</label>
+            <input type="text">
+            <br>  
+            <label for="">Police Reports</label>
+            <input type="text">
+            <br>
+            
+            <input type="button" value="Submit">
+            <i class="fa-solid fa-trash-can-xmark" id="fa-trash-can-xmark"></i>
+            <i class="fa-solid fa-circle-plus"></i>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="AddOrDelete" id="AddOrDeleteContainer">
+
+
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+      <!-- Tax Dependents Records -->    
+    <!-- <span id="TaxDependent"> 
+      <h1>Tax Dependent Records</h1>
+
+    <details id="TaxDependentOptions">
+      <summary>What are you going Loging Today?</summary>
+      <li id="ProofOfRelationship">Proof of Relationship</li>
+      <li id="ProofOfIdentity">Proof of Identity</li>
+      <li id="ProofOfResidency">Proof of Residency (For Children)</li>
+      <li id="ProofOfFinancialRecords">Proof of Financial Support (For Relatives or Elder Dependents)</li>
+      <li id="ChildCareExpenses">Child Care Expenses</li>
+      <li id="MedicalExpenses">Medical Expenses</li>
+      <li id="EducationExpenses">Education Expenses</li>
+      <li id="AlimonyAndChildSupport">Alimony and Child Support</li>
+      <li id="LegalDocuments">Legal Document (If applicable)</li>
+      <li id="SupportProvidedDependts">Support Provided for Dependent (For non-children Dependents)</li>
+     </details>
+    </span> -->
+<!-- 
+  <div class="TaxDependentForm" id="TaxDependentForm">
+
+    <div>
+      <form action="" class="ProofOfRelationshipForm" id="ProofOfRelationshipForm">
+        <fieldset id="ProofOfRelationshipField">
+          <legend>Proof of Relationship</legend>
+          <label for="">Birth Certificates</label>
+          <input type="text">
+
+          <label for="">Adoption Papers or Decree</label>
+          <input type="text">
+
+          <label for="">Marriage Certificates (if stepchild)</label>
+          <input type="text">
+
+          <label for="">Court Order or Legal Guardianship Documents</label>
+          <input type="text">
+
+          <label for="">School or Medical Records</label>
+          <input type="text">
+
+          <label for="">Social Secuirty Cards for Dependents</label>
+          <input type="text">
+
+          <label for="">Birth Certificates</label>
+          <input type="text">
+
+          <label for="">Birth Certificates</label>
+          <input type="text">
+
+          
+        </fieldset>
+      </form>
+
+
+
+      <div>  
+      <form action="" method="post" class="ProofOfIdentityForm" id="ProofOfIdentityForm">
+        <fieldset id="ProofOfIdentityField">
+          <legend>Proof of Identity</legend>
+
+          <label for="">SSN</label>
+          <input type="text">
+
+          <label for="">Birth Certificates</label>
+          <input type="text">
+
+          <label for="">ITIN (No SSN)</label>
+          <input type="text">
+
+          <label for="">Passport or Government-Issued Identification</label>
+          <input type="text">
+        </fieldset>
+      </form>
+    </div>
+
+
+
+    <div>
+      <form action="" class="ProofOfResidencyForm" id="ProofOfResidencyForm">
+        <fieldset id="ProofOfResidencyField">
+          <legend>Proof of Residency (For Children)</legend>
+          <label for="">School Records or Report Cards</label>
+          <input type="text">
+
+          <label for="">Medical Records or Doctor's Statements</label>
+          <input type="text">
+
+          <label for="">Lease Agreement or Utility Bills</label>
+          <input type="text">
+
+          <label for="">Daycare Records</label>
+          <input type="text" name="" id="">
+        </fieldset>
+      </form>
+    </div>
+
+
+    <div>
+      <form class="ProofOfFinancialRecordsForm" id="ProofOfFinancialRecordsForm">
+        <fieldset id="ProofOfFinancialRecordsField">
+          <legend>Proof of Financial Support (For Relatives or Elder Dependents)</legend>
+
+          <label for="">Bank Statements or Financial Records</label>
+          <input type="text" name="" id="">
+
+          <label for="">Receipts for Household Expenses</label>
+          <input type="text" name="" id="">
+        </fieldset>
+      </form>
+    </div>
+
+
+    <div>
+      <form action="" class="ChildCareExpensesForm" id="ChildCareExpensesForm">
+        <fieldset id="ChildCareExpensesField">
+          <legend>Child Care Expenses</legend>
+          <label for="">Receipts for Child Care Expenses</label>
+          <input type="text">
+
+          <label for="">Tax ID or SSN</label>
+          <input type="text">
+        </fieldset>
+      </form>
+    </div>
+
+    <div>
+      <form action="" class="MedicalExpensesForm" id="MedicalExpensesForm">
+        <fieldset id="MedicalExpensesField">
+          <legend>Medical Expenses</legend>
+          <label for="">Medical Bills and Receipts</label>
+          <input type="text">
+
+          <label for="">Health Insurance Records</label>
+          <input type="text">
+
+
+        </fieldset>
+      </form>
+    </div>
+
+
+    <div>
+      <form action="" class="EducationExpensesForm" id="EducationExpensesForm">
+        <fieldset id="EducationExpensesField">
+          <legend>Education Expenses</legend>
+          <label for="">Tuition Statements (Form 1098-T)</label>
+          <input type="text">
+
+          <label for="">Receipts for Books, supplies, and equipment</label>
+          <input type="text">
+
+          <label for="">Student Loan interest Statements </label>
+
+        </fieldset>
+      </form>
+    </div>
+
+
+
+    <div>
+      <form action="" class="AlimonyAndChildSupportForm" id="AlimonyAndChildSupportForm">
+        <fieldset id="AlimonyAndChildSupportField">
+        <legend>Alimony and Child Support</legend>
+
+        <label for="">Alimony or Child support agreements</label>
+        <input type="text" name="" id="">
+
+        <label for="">Proof of payments</label>
+        <input type="text" name="" id="">
+      </fieldset>
+      </form>
+    </div>
+
+
+
+      <div>
+        <form action="" class="LegalDocumentsForm" id="LegalDocumentsForm">
+          <fieldset id="LegalDocumentsField">
+            <legend>Legal Document (If applicable)</legend>
+
+            <label for="">Divorce decrees or separation agreements</label>
+            <input type="text" name="" id="">
+
+            <label for="">Form 8332 (Release/Revocation of Claim to Exemption)</label>
+          </fieldset>
+        </form>
+      </div>
+
+      <div>
+        <form action="" class="SupportProvidedDependtsForm" id="SupportProvidedDependtsForm">
+          <fieldset id="SupportProvidedDependtsField">
+            <legend>Support Provided for Dependent (For non-children Dependents)</legend>
+            
+            <label for="">Proof of Support</label>
+            <input type="text">
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <div id="AddOrDeleteBox">
+
+    </div>
+  </div>
+
+  
+  <div id="AddOrDeleteBox">
+
+  </div> -->
+
+
+
+
+  
+      <!-- <span id="Vehicle"> 
+        <h1>Tax Dependent</h1>
+      <details id="test">
+        <summary>What are you going Loging Today?</summary>
+        <li id="VehicleInfor">Vehicle Information</li>
+        <li id="VehicleMan">Maintenance & Repairs</li>
+        <li id="VehicleFuel">Vehicle Fuel Log</li>
+        <li id="VehicleRegis">Vehicle Registration</li>
+        <li id="VehicleInsur">Vehicle Insurance</li>
+        <li id="VehicleAcci">Vehicle Accident Log</li>
+       </details>
+      </span> -->
+
+<!--       
+      <form action="">
+        <fieldset>
+          <legend></legend>
+          <label for=""></label>
+          <input type="text">
+        </fieldset>
+      </form>
+    </div>
+
+
+
+  <div>
+    <div>
+      <form action="">
+        <fieldset>
+          <legend></legend>
+          <label for=""></label>
+          <input type="text">
+        </fieldset>
+      </form>
+    </div>
+
+    <div>
+      <form action="">
+        <fieldset>
+          <legend></legend>
+          <label for=""></label>
+          <input type="text">
+        </fieldset>
+      </form>
+    </div>
+
+    <div>
+      <form action="">
+        <fieldset>
+          <legend></legend>
+          <label for=""></label>
+          <input type="text">
+        </fieldset>
+      </form>
+    </div>
+
+    <div>
+      <form action="">
+        <fieldset>
+          <legend></legend>
+          <label for=""></label>
+          <input type="text">
+        </fieldset>
+      </form>
+    </div>
+
+    <div>
+      <form action="">
+        <fieldset>
+          <legend></legend>
+          <label for=""></label>
+          <input type="text">
+        </fieldset>
+      </form>
+    </div>
+  </div> -->
+
+
+
+  
+
+
+  <script src="TEST.js"></script>
+
 </body>
 </html>
